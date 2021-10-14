@@ -9,19 +9,31 @@
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0 auto;
-  background: rgb(174,238,188);
-  background: radial-gradient(circle, rgba(174,238,188,0.7612903225806451) 0%, 
-rgba(148,187,233,0.6301075268817204) 100%);
-  /* text-align: justify; */
-  /* background-color: ; */
+
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
 }
 
 .header {
-  padding: 30px;
+  padding: 10px;
   text-align: center;
-  background: #22336a;
-
+  background: #8697cf;
   color: white;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-evenly;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+  font-size: 18pt;
 }
 
 .navbar {
@@ -46,8 +58,70 @@ rgba(148,187,233,0.6301075268817204) 100%);
 @media (max-width: 700px) {
   .navbar {   
     flex-direction: column;
+    font-size: 60%;
+    padding: .1px;
     /* width: 100vw; */
   }
+  .header {
+    padding: .1px;
+    font-size: 15pt;
+    /* flex-direction: column; */
+    /* display: none; */
+  }
+
+  .header img {
+    display: none;
+  }
+  
+  .contenedor {
+    font-size: 80%;
+    margin: 250px auto 0px;
+    width: 100%;
+  }
+  .encuestas {
+    min-width: 100%;
+  }
+
+  form select {
+    font-size: 75%;
+  }
+
+  button {
+    font-size: 75%;
+
+  }
+}
+
+#linkon {
+  text-decoration: none;
+  color: black;
+}
+
+div>fieldset>p {
+  text-align: justify;
+}
+
+ul>li{
+  text-align: justify;
+}
+
+.aviso-priv {
+  width: 30%;
+  padding: 7.5px;
+  border-radius: 10px;
+  /* border: 0; */
+  background-color: rgb(182, 174, 255);
+  text-transform: uppercase;
+  cursor:pointer;
+  z-index:unset;
+}
+
+.aviso-priv:hover {
+  transform: scale(1.03);
+  background-color: rgb(57, 179, 236);
+  color: white;
+  z-index:unset;
+
 }
 
 /* Esto no sirve */
@@ -66,18 +140,36 @@ rgba(148,187,233,0.6301075268817204) 100%);
 
 .contenedor {
   margin-bottom: 15px;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   /* background-color: rgba(33, 19, 161, 0.185); */
   border-radius: 10px;
+  overflow: hidden;
+  margin: 300px auto 0px;
 }
 
 .saludsex, .consumsust, .saludpsico, .saludfisica {
-  background-color: rgba(105, 41, 223, 0.18);
+  /* background-color: rgba(105, 41, 223, 0.18); */
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 10px;
+}
+
+.saludfisica {
+  background-color: rgba(0, 26, 255, 0.329);
+}
+
+.saludpsico {
+  background-color: rgba(255, 0, 0, 0.323);
+}
+
+.consumsust {
+  background-color: rgba(251, 255, 0, 0.323);
+}
+
+.saludsex {
+  background-color: rgba(38, 255, 0, 0.323);
 }
 
 #legenda {
@@ -88,6 +180,7 @@ rgba(148,187,233,0.6301075268817204) 100%);
 
 h1 {
   text-align: center;
+  font-size: 150%;
 }
 
 fieldset {
@@ -142,9 +235,16 @@ select {
   justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
-  background: #22336a;
-  
+  background: #22336a;  
 }
+
+.container-inicio {
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  /* background: #22336a;   */
+}
+
 
 footer {
   width: 100vw;
@@ -155,16 +255,6 @@ footer {
   /* padding: 0 1rem; */
   font-size: 65%;
 }
-
-/* p {
-  text-align: justify;
-} */
-
-/* a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-} */
 
 #creditos {
   font-size: 120%;
@@ -180,30 +270,17 @@ footer {
   font-size: 110%;
 }
 
-/* .columna1 {
-	width: 500px;
-	margin: 10px 0;
-} */
-
-/* .columna1-content {
-  margin: 10px 0;
-  width: 100%;
-}
-.columna1-texto {
-  width: 100%;
-  line-height: 1.2rem;
-} */
-
 .margin-columna2 {
   text-decoration: none;
   color: white;
   font-weight: bold;
 }
-/* 
-.infouaa-columna2 {
-	width: 350px;
-	line-height: 1.2rem;
-} */
+
+.margin-columna-inicio {
+  text-decoration: none;
+  /* color: white; */
+  font-weight: bold;
+}
 
 .columna1, .columna2 {
   flex: 40%;
@@ -222,3 +299,33 @@ footer {
     width: 80%;
   }
 }
+
+.btn-guardar {
+  /* margin: 0 auto; */
+  /* width: 70%; */
+  cursor: pointer;
+}
+
+.guardar {
+  width: 100%;
+  height: 80px;
+  font-size: 110%;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 11px;
+  /* margin: 0 auto; */
+  padding: 10px;
+  background: #07641e;
+  border: 0;
+  cursor: pointer;
+  border-radius: 15px;
+
+}
+
+.guardar:hover {
+  background-color: #04d137;
+  cursor: pointer;
+  color: #333;
+  transform: scale(.9);
+}
+

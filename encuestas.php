@@ -5,24 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
-    <title>PES</title>
+    <title>PSU</title>
 </head>
 <body>
     <!-- HEADER "TITULO" -->
-    <div class="header">
-        <h1 id="titulo-pes">P.E.S.</h1>
-    </div>
-    <!-- MENU DE NAVEGACIÓN -->
-    <div class="navbar">
-        <a href="#saludfisica">SALUD FÍSICA</a>
-        <a href="#saludpsico">SALUD PSICOSOCIAL</a>
-        <a href="#consumsust">CONSUMO DE SUSTANCIAS</a>
-        <a href="#saludsex">SALUD SEXUAL</a>
-      </div>
+    <header>
+        <div class="header">
+            <a href="#"><img src="./img/us.png" alt="" width="150px"></a>
+            <a href="#"><h1 id="titulo-pes">Perfil de Salud Universitario</h1></a>
+            <a href="#"><img src="./img/descarga.png" alt="" width="150px"></a>
+        </div>
+        <!-- MENU DE NAVEGACIÓN -->
+        <div class="navbar">
+            <a href="#inicio">INICIO</a>
+            <a href="#saludfisica">SALUD FÍSICA</a>
+            <a href="#saludpsico">SALUD PSICOSOCIAL</a>
+            <a href="#consumsust">CONSUMO DE SUSTANCIAS</a>
+            <a href="#saludsex">SALUD SEXUAL</a>
+        </div>
+    </header>
     <div class="contenedor">
-        <!-- MENU DE NAVEGACION -->
-
         <section class="encuestas">
+            <!-- aqui va el INICIO -->
+            <article class="inicio" id="inicio">
+                <div>
+                    <fieldset>
+                        <h1>INICIO</h1>
+                        <p style="text-align: center;">Bienvenido: <button class="aviso-priv"> <a id="linkon" href="./avisopriv.html" target="blank_">Ver Aviso de Privacidad</a></button> </p>
+                        <h2>¿Qué es P.S.U.?</h2>
+                        <p>Es un Instrumento de evaluación de salud desarollado por el programa Universidad Saludable de nuestra Universidad. Se compone de una evaluación electrónica en línea y una toma de medidas.</p>
+                        <div class="container-inicio">
+                            <div class="columna1">
+                                <p id="creditos"><b>Instrucciones para usuarios en computadora</b></p>
+                                <div class="columna1-content">                  
+                                    <ul class="columna1-texto">
+                                        <li>Desplazarse hacia abajo respondiendo cada seciión</li>
+                                        <li>Para desplazarse entre secciones puede hacer uso de la barra de navegación dando click en la categoría deseada</li>
+                                        <li>IMPORTANTE: Es necesario al acabar de responder la sección dar click en el botón GUARDAR de lo contrario no quedarán guardados sus datos</li>
+                                    </ul>  
+                                </div>
+                            </div>
+                            <div class="columna2">                
+                                <p id="recursos" class="margin-columna-inicio">Instrucciones para usuarios en móviles</p>                                  
+                                <p class="infouaa-columna2"></p>
+                                <ul class="infouaa-columna2">
+                                    <li>De preferencia usar el celular de manera horizontal si le es más cómodo</li>
+                                    <li>Desplazarse entre secciones haciendo uso del menú o desplazandose hacia abajo</li>
+                                    <li>En caso de no ver todas las respuestas debe desplazarse a la derecha</li>
+                                    <li>Una vez terminada una sección guardarla</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div> 
+            </article>
             <!-- aqui empieza salud física -->
             <article class="saludfisica" id="saludfisica">
                 <fieldset>
@@ -759,6 +795,9 @@
         </section>
     </div>
 
+    <div class="btn-guardar">
+        <button class="guardar">GUARDAR</button>
+    </div>
     
     <!-- aqui va el footer -->
     <footer>
