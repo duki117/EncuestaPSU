@@ -416,215 +416,235 @@
                 <fieldset>
                     <legend>CONSUMO DE SUSTANCIAS</legend>
                     <form action="#">
-                        <!-- primera parte del formulario -->
-                        <h3>CONSUMO DE DROGAS</h3>
-                        <p id="legenda">Responde a cada pregunta según se aplique a tu condición actual</p>
-                        <!-- Primera parte de consumo de drogas -->
-                        <h4>01. A lo largo de tu Vida, ¿Cuál de las siguientes sustancias has consumido alguna vez?</h4>
-                        <!-- pregunta a -->
-                        <label for="a1">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                        <input type="radio" name="a1" id="a1" value="1"><label for="a1">1 - SI</label> <br>
-                        <input type="radio" name="a1" id="a1" value="0"><label for="a1">2 - NO</label> <br> <br>
-                        <!-- pregunta b -->
-                        <label for="b1">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                        <input type="radio" name="b1" id="b1" value="1"><label for="b1">1 - SI</label> <br>
-                        <input type="radio" name="b1" id="b1" value="0"><label for="b1">2 - NO</label> <br> <br>
-                        <!-- pregunta c -->
-                        <label for="c1">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                        <input type="radio" name="c1" id="c1" value="1"><label for="c1">1 - SI</label> <br>
-                        <input type="radio" name="c1" id="c1" value="0"><label for="c1">2 - NO</label> <br> <br>
-                        <!-- pregunta d -->
-                        <label for="d1">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                        <input type="radio" name="d1" id="d1" value="1"><label for="d1">1 - SI</label> <br>
-                        <input type="radio" name="d1" id="d1" value="0"><label for="d1">2 - NO</label> <br> <br>
-                        <!-- SI LA PERSONA PONE QUE NO LO HA HECHO LINKEALO A LA PREGUNTA 9 Y BLOQUEA TODAS LAS PREGUNTAS DE AQUI ABAJO -->
 
+                    
+
+                        <!-- primera parte del formulario -->
+                        <div id="Pregunta1">
+                            <h3>CONSUMO DE DROGAS</h3>
+                            <p id="legenda">Responde a cada pregunta según se aplique a tu condición actual</p>
+                            <!-- Primera parte de consumo de drogas -->
+                            <h4>01. A lo largo de tu Vida, ¿Cuál de las siguientes sustancias has consumido alguna vez?</h4>
+                            <!-- pregunta a -->
+                            <label for="a1">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
+                            <input type="radio" name="a1" id="a11" value="1"><label for="a11">1 - SI</label> <br>
+                            <input type="radio" name="a1" id="a12" value="0"><label for="a12">2 - NO</label> <br> <br>
+                            <!-- pregunta b -->
+                            <label for="b1">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
+                            <input type="radio" name="b1" id="b11" value="1"><label for="b11">1 - SI</label> <br>
+                            <input type="radio" name="b1" id="b12" value="0"><label for="b12">2 - NO</label> <br> <br>
+                            <!-- pregunta c -->
+                            <label for="c1">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
+                            <input type="radio" name="c1" id="c11" value="1"><label for="c11">1 - SI</label> <br>
+                            <input type="radio" name="c1" id="c12" value="0"><label for="c12">2 - NO</label> <br> <br>
+                            <!-- pregunta d -->
+                            <label for="d1">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
+                            <input type="radio" name="d1" id="d11" value="1"><label for="d11">1 - SI</label> <br>
+                            <input type="radio" name="d1" id="d12" value="0"><label for="d12">2 - NO</label> <br> <br>
+
+                            <!-- INPUT OCULTO PARA CONTROLAR LOS ENVIOS DE INFORMACION POR METODO POST-->
+                            <input type="hidden" name="pregunta" id="pregunta" value="1">
+                            <!-- SI LA PERSONA PONE QUE NO LO HA HECHO LINKEALO A LA PREGUNTA 9 Y BLOQUEA TODAS LAS PREGUNTAS DE AQUI ABAJO -->
+                        </div>
 
                         <!-- SEGUNDA parte de consumo de drogas -->
-                        <h4>2. Con que frecuencia has consumido las sustancias que mencionaste en los últimos tres meses?</h4>
-                        <!-- pregunta a -->
-                        <label for="a2">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                        <input type="radio" name="a2" id="a2" value="0"><label for="a2"> NUNCA</label> <br> <br>
-                        <input type="radio" name="a2" id="a2" value="2"><label for="a2"> 1 O 2 VECES</label> <br><br>
-                        <input type="radio" name="a2" id="a2" value="3"><label for="a2"> CADA MES</label> <br> <br>
-                        <input type="radio" name="a2" id="a2" value="4"><label for="a2"> CADA SEMANA</label> <br> <br>
-                        <input type="radio" name="a2" id="a2" value="6"><label for="a2"> A DIARIO O CASI DIARIO</label> <br> <br>
-                        <!-- pregunta b -->
-                        <label for="b2">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                        <input type="radio" name="b2" id="b2" value="0"><label for="b2"> NUNCA</label> <br> <br>
-                        <input type="radio" name="b2" id="b2" value="2"><label for="b2"> 1 O 2 VECES</label> <br> <br>
-                        <input type="radio" name="b2" id="b2" value="3"><label for="b2"> CADA MES</label> <br> <br>
-                        <input type="radio" name="b2" id="b2" value="4"><label for="b2"> CADA SEMANA</label> <br> <br>
-                        <input type="radio" name="b2" id="b2" value="6"><label for="b2"> A DIARIO O CASI DIARIO</label> <br> <br>
-                        <!-- pregunta c -->
-                        <label for="c2">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                        <input type="radio" name="c2" id="c2" value="0"><label for="c2"> NUNCA</label> <br> <br>
-                        <input type="radio" name="c2" id="c2" value="2"><label for="c2"> 1 O 2 VECES</label> <br><br>
-                        <input type="radio" name="c2" id="c2" value="3"><label for="c2"> CADA MES</label> <br> <br>
-                        <input type="radio" name="c2" id="c2" value="4"><label for="c2"> CADA SEMANA</label> <br> <br>
-                        <input type="radio" name="c2" id="c2" value="6"><label for="c2"> A DIARIO O CASI DIARIO</label> <br> <br>
-                        <!-- pregunta d -->
-                        <label for="d2">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                        <input type="radio" name="d2" id="d2" value="0"><label for="d2"> NUNCA</label> <br> <br>
-                        <input type="radio" name="d2" id="d2" value="2"><label for="d2"> 1 O 2 VECES</label> <br><br>
-                        <input type="radio" name="d2" id="d2" value="3"><label for="d2"> CADA MES</label> <br> <br>
-                        <input type="radio" name="d2" id="d2" value="4"><label for="d2"> CADA SEMANA</label> <br> <br>
-                        <input type="radio" name="d2" id="d2" value="6"><label for="d2"> A DIARIO O CASI DIARIO</label> <br> <br>
-                        <!-- SI LA PERSONA PONE QUE NO LO HA HECHO LINKEALO A LA PREGUNTA 9 Y BLOQUEA TODAS LAS PREGUNTAS DE AQUI ABAJO -->
-
+                        <div id="Pregunta2">
+                            <h4>2. Con que frecuencia has consumido las sustancias que mencionaste en los últimos tres meses?</h4>
+                            <!-- pregunta a -->
+                            <label for="a2">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
+                            <input type="radio" name="a2" id="a21" value="0"><label for="a21"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a2" id="a22" value="2"><label for="a22"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="a2" id="a23" value="3"><label for="a23"> CADA MES</label> <br> <br>
+                            <input type="radio" name="a2" id="a24" value="4"><label for="a24"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="a2" id="a25" value="6"><label for="a25"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- pregunta b -->
+                            <label for="b2">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
+                            <input type="radio" name="b2" id="b21" value="0"><label for="b21"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b2" id="b22" value="2"><label for="b22"> 1 O 2 VECES</label> <br> <br>
+                            <input type="radio" name="b2" id="b23" value="3"><label for="b23"> CADA MES</label> <br> <br>
+                            <input type="radio" name="b2" id="b24" value="4"><label for="b24"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="b2" id="b25" value="6"><label for="b25"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- pregunta c -->
+                            <label for="c2">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
+                            <input type="radio" name="c2" id="c21" value="0"><label for="c21"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c2" id="c22" value="2"><label for="c22"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="c2" id="c23" value="3"><label for="c23"> CADA MES</label> <br> <br>
+                            <input type="radio" name="c2" id="c24" value="4"><label for="c24"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="c2" id="c25" value="6"><label for="c25"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- pregunta d -->
+                            <label for="d2">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
+                            <input type="radio" name="d2" id="d21" value="0"><label for="d21"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d2" id="d22" value="2"><label for="d22"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="d2" id="d23" value="3"><label for="d23"> CADA MES</label> <br> <br>
+                            <input type="radio" name="d2" id="d24" value="4"><label for="d24"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="d2" id="d25" value="6"><label for="d25"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- SI LA PERSONA PONE QUE NO LO HA HECHO LINKEALO A LA PREGUNTA 9 Y BLOQUEA TODAS LAS PREGUNTAS DE AQUI ABAJO -->
+                        </div>
 
                         <!-- TERCERA parte de consumo de drogas -->
-                        <h4>3. En los últimos tres meses, ¿Con qué frecuencia has tenido deseos fuertes o ansias de consumir la droga mencionada?</h4>
-                        <!-- pregunta a -->
-                        <label for="a3">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                        <input type="radio" name="a3" id="a3" value="0"><label for="a3"> NUNCA</label> <br> <br>
-                        <input type="radio" name="a3" id="a3" value="2"><label for="a3"> 1 O 2 VECES</label> <br><br>
-                        <input type="radio" name="a3" id="a3" value="3"><label for="a3"> CADA MES</label> <br> <br>
-                        <input type="radio" name="a3" id="a3" value="4"><label for="a3"> CADA SEMANA</label> <br> <br>
-                        <input type="radio" name="a3" id="a3" value="6"><label for="a3"> A DIARIO O CASI DIARIO</label> <br> <br>
-                        <!-- pregunta b -->
-                        <label for="b3">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                        <input type="radio" name="b3" id="b3" value="0"><label for="b3"> NUNCA</label> <br> <br>
-                        <input type="radio" name="b3" id="b3" value="2"><label for="b3"> 1 O 2 VECES</label> <br> <br>
-                        <input type="radio" name="b3" id="b3" value="3"><label for="b3"> CADA MES</label> <br> <br>
-                        <input type="radio" name="b3" id="b3" value="4"><label for="b3"> CADA SEMANA</label> <br> <br>
-                        <input type="radio" name="b3" id="b3" value="6"><label for="b3"> A DIARIO O CASI DIARIO</label> <br> <br>
-                        <!-- pregunta c -->
-                        <label for="c3">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                        <input type="radio" name="c3" id="c3" value="0"><label for="c3"> NUNCA</label> <br> <br>
-                        <input type="radio" name="c3" id="c3" value="2"><label for="c3"> 1 O 2 VECES</label> <br><br>
-                        <input type="radio" name="c3" id="c3" value="3"><label for="c3"> CADA MES</label> <br> <br>
-                        <input type="radio" name="c3" id="c3" value="4"><label for="c3"> CADA SEMANA</label> <br> <br>
-                        <input type="radio" name="c3" id="c3" value="6"><label for="c3"> A DIARIO O CASI DIARIO</label> <br> <br>
-                        <!-- pregunta d -->
-                        <label for="d3">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                        <input type="radio" name="d3" id="d3" value="0"><label for="d3"> NUNCA</label> <br> <br>
-                        <input type="radio" name="d3" id="d3" value="2"><label for="d3"> 1 O 2 VECES</label> <br><br>
-                        <input type="radio" name="d3" id="d3" value="3"><label for="d3"> CADA MES</label> <br> <br>
-                        <input type="radio" name="d3" id="d3" value="4"><label for="d3"> CADA SEMANA</label> <br> <br>
-                        <input type="radio" name="d3" id="d3" value="6"><label for="d3"> A DIARIO O CASI DIARIO</label> <br> <br>
+                        <div id="Pregunta3">
+                            <h4>3. En los últimos tres meses, ¿Con qué frecuencia has tenido deseos fuertes o ansias de consumir la droga mencionada?</h4>
+                            <!-- pregunta a -->
+                            <label for="a3">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
+                            <input type="radio" name="a3" id="a3" value="0"><label for="a3"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a3" id="a3" value="2"><label for="a3"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="a3" id="a3" value="3"><label for="a3"> CADA MES</label> <br> <br>
+                            <input type="radio" name="a3" id="a3" value="4"><label for="a3"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="a3" id="a3" value="6"><label for="a3"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- pregunta b -->
+                            <label for="b3">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
+                            <input type="radio" name="b3" id="b3" value="0"><label for="b3"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b3" id="b3" value="2"><label for="b3"> 1 O 2 VECES</label> <br> <br>
+                            <input type="radio" name="b3" id="b3" value="3"><label for="b3"> CADA MES</label> <br> <br>
+                            <input type="radio" name="b3" id="b3" value="4"><label for="b3"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="b3" id="b3" value="6"><label for="b3"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- pregunta c -->
+                            <label for="c3">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
+                            <input type="radio" name="c3" id="c3" value="0"><label for="c3"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c3" id="c3" value="2"><label for="c3"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="c3" id="c3" value="3"><label for="c3"> CADA MES</label> <br> <br>
+                            <input type="radio" name="c3" id="c3" value="4"><label for="c3"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="c3" id="c3" value="6"><label for="c3"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- pregunta d -->
+                            <label for="d3">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
+                            <input type="radio" name="d3" id="d3" value="0"><label for="d3"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d3" id="d3" value="2"><label for="d3"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="d3" id="d3" value="3"><label for="d3"> CADA MES</label> <br> <br>
+                            <input type="radio" name="d3" id="d3" value="4"><label for="d3"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="d3" id="d3" value="6"><label for="d3"> A DIARIO O CASI DIARIO</label> <br> <br>
+                        </div>
 
                          <!-- CUARTA parte de consumo de drogas -->
-                         <h4>4. En los últimos tres meses, ¿Con qué frecuencia te ha llevado su consumo de esta droga a problemas de salud, sociales, legales o económicos?</h4>
-                         <!-- pregunta a -->
-                         <label for="a4">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                         <input type="radio" name="a4" id="a4" value="0"><label for="a4"> NUNCA</label> <br> <br>
-                         <input type="radio" name="a4" id="a4" value="2"><label for="a4"> 1 O 2 VECES</label> <br><br>
-                         <input type="radio" name="a4" id="a4" value="3"><label for="a4"> CADA MES</label> <br> <br>
-                         <input type="radio" name="a4" id="a4" value="4"><label for="a4"> CADA SEMANA</label> <br> <br>
-                         <input type="radio" name="a4" id="a4" value="6"><label for="a4"> A DIARIO O CASI DIARIO</label> <br> <br>
-                         <!-- pregunta b -->
-                         <label for="b4">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                         <input type="radio" name="b4" id="b4" value="0"><label for="b4"> NUNCA</label> <br> <br>
-                         <input type="radio" name="b4" id="b4" value="2"><label for="b4"> 1 O 2 VECES</label> <br> <br>
-                         <input type="radio" name="b4" id="b4" value="3"><label for="b4"> CADA MES</label> <br> <br>
-                         <input type="radio" name="b4" id="b4" value="4"><label for="b4"> CADA SEMANA</label> <br> <br>
-                         <input type="radio" name="b4" id="b4" value="6"><label for="b4"> A DIARIO O CASI DIARIO</label> <br> <br>
-                         <!-- pregunta c -->
-                         <label for="c4">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                         <input type="radio" name="c4" id="c4" value="0"><label for="c4"> NUNCA</label> <br> <br>
-                         <input type="radio" name="c4" id="c4" value="2"><label for="c4"> 1 O 2 VECES</label> <br><br>
-                         <input type="radio" name="c4" id="c4" value="3"><label for="c4"> CADA MES</label> <br> <br>
-                         <input type="radio" name="c4" id="c4" value="4"><label for="c4"> CADA SEMANA</label> <br> <br>
-                         <input type="radio" name="c4" id="c4" value="6"><label for="c4"> A DIARIO O CASI DIARIO</label> <br> <br>
-                         <!-- pregunta d -->
-                         <label for="d4">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                         <input type="radio" name="d4" id="d4" value="0"><label for="d4"> NUNCA</label> <br> <br>
-                         <input type="radio" name="d4" id="d4" value="2"><label for="d4"> 1 O 2 VECES</label> <br><br>
-                         <input type="radio" name="d4" id="d4" value="3"><label for="d4"> CADA MES</label> <br> <br>
-                         <input type="radio" name="d4" id="d4" value="4"><label for="d4"> CADA SEMANA</label> <br> <br>
-                         <input type="radio" name="d4" id="d4" value="6"><label for="d4"> A DIARIO O CASI DIARIO</label> <br> <br>
+                         <div id="Pregunta4">
+                            <h4>4. En los últimos tres meses, ¿Con qué frecuencia te ha llevado su consumo de esta droga a problemas de salud, sociales, legales o económicos?</h4>
+                            <!-- pregunta a -->
+                            <label for="a4">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
+                            <input type="radio" name="a4" id="a4" value="0"><label for="a4"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a4" id="a4" value="2"><label for="a4"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="a4" id="a4" value="3"><label for="a4"> CADA MES</label> <br> <br>
+                            <input type="radio" name="a4" id="a4" value="4"><label for="a4"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="a4" id="a4" value="6"><label for="a4"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- pregunta b -->
+                            <label for="b4">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
+                            <input type="radio" name="b4" id="b4" value="0"><label for="b4"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b4" id="b4" value="2"><label for="b4"> 1 O 2 VECES</label> <br> <br>
+                            <input type="radio" name="b4" id="b4" value="3"><label for="b4"> CADA MES</label> <br> <br>
+                            <input type="radio" name="b4" id="b4" value="4"><label for="b4"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="b4" id="b4" value="6"><label for="b4"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- pregunta c -->
+                            <label for="c4">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
+                            <input type="radio" name="c4" id="c4" value="0"><label for="c4"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c4" id="c4" value="2"><label for="c4"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="c4" id="c4" value="3"><label for="c4"> CADA MES</label> <br> <br>
+                            <input type="radio" name="c4" id="c4" value="4"><label for="c4"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="c4" id="c4" value="6"><label for="c4"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- pregunta d -->
+                            <label for="d4">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
+                            <input type="radio" name="d4" id="d4" value="0"><label for="d4"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d4" id="d4" value="2"><label for="d4"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="d4" id="d4" value="3"><label for="d4"> CADA MES</label> <br> <br>
+                            <input type="radio" name="d4" id="d4" value="4"><label for="d4"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="d4" id="d4" value="6"><label for="d4"> A DIARIO O CASI DIARIO</label> <br> <br>
+                        </div>
 
                         <!-- QUINTA parte de consumo de drogas -->
-                        <h4>5. En los últimos tres meses, ¿Con qué frecuencia dejaste de hacer lo que se esperaba de ti habitualmente por el consumo de estas drogas?</h4>
-                        <!-- pregunta a -->
-                        <label for="a5">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                        <input type="radio" name="a5" id="a5" value="0"><label for="a5"> NUNCA</label> <br> <br>
-                        <input type="radio" name="a5" id="a5" value="2"><label for="a5"> 1 O 2 VECES</label> <br><br>
-                        <input type="radio" name="a5" id="a5" value="3"><label for="a5"> CADA MES</label> <br> <br>
-                        <input type="radio" name="a5" id="a5" value="4"><label for="a5"> CADA SEMANA</label> <br> <br>
-                        <input type="radio" name="a5" id="a5" value="6"><label for="a5"> A DIARIO O CASI DIARIO</label> <br> <br>
-                        <!-- pregunta b -->
-                        <label for="b5">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                        <input type="radio" name="b5" id="b5" value="0"><label for="b5"> NUNCA</label> <br> <br>
-                        <input type="radio" name="b5" id="b5" value="2"><label for="b5"> 1 O 2 VECES</label> <br> <br>
-                        <input type="radio" name="b5" id="b5" value="3"><label for="b5"> CADA MES</label> <br> <br>
-                        <input type="radio" name="b5" id="b5" value="4"><label for="b5"> CADA SEMANA</label> <br> <br>
-                        <input type="radio" name="b5" id="b5" value="6"><label for="b5"> A DIARIO O CASI DIARIO</label> <br> <br>
-                        <!-- pregunta c -->
-                        <label for="c5">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                        <input type="radio" name="c5" id="c5" value="0"><label for="c5"> NUNCA</label> <br> <br>
-                        <input type="radio" name="c5" id="c5" value="2"><label for="c5"> 1 O 2 VECES</label> <br><br>
-                        <input type="radio" name="c5" id="c5" value="3"><label for="c5"> CADA MES</label> <br> <br>
-                        <input type="radio" name="c5" id="c5" value="4"><label for="c5"> CADA SEMANA</label> <br> <br>
-                        <input type="radio" name="c5" id="c5" value="6"><label for="c5"> A DIARIO O CASI DIARIO</label> <br> <br>
-                        <!-- pregunta d -->
-                        <label for="d5">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                        <input type="radio" name="d5" id="d5" value="0"><label for="d5"> NUNCA</label> <br> <br>
-                        <input type="radio" name="d5" id="d5" value="2"><label for="d5"> 1 O 2 VECES</label> <br><br>
-                        <input type="radio" name="d5" id="d5" value="3"><label for="d5"> CADA MES</label> <br> <br>
-                        <input type="radio" name="d5" id="d5" value="4"><label for="d5"> CADA SEMANA</label> <br> <br>
-                        <input type="radio" name="d5" id="d5" value="6"><label for="d5"> A DIARIO O CASI DIARIO</label> <br> <br>
+                        <div id="Pregunta5">
+                            <h4>5. En los últimos tres meses, ¿Con qué frecuencia dejaste de hacer lo que se esperaba de ti habitualmente por el consumo de estas drogas?</h4>
+                            <!-- pregunta a -->
+                            <label for="a5">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
+                            <input type="radio" name="a5" id="a5" value="0"><label for="a5"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a5" id="a5" value="2"><label for="a5"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="a5" id="a5" value="3"><label for="a5"> CADA MES</label> <br> <br>
+                            <input type="radio" name="a5" id="a5" value="4"><label for="a5"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="a5" id="a5" value="6"><label for="a5"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- pregunta b -->
+                            <label for="b5">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
+                            <input type="radio" name="b5" id="b5" value="0"><label for="b5"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b5" id="b5" value="2"><label for="b5"> 1 O 2 VECES</label> <br> <br>
+                            <input type="radio" name="b5" id="b5" value="3"><label for="b5"> CADA MES</label> <br> <br>
+                            <input type="radio" name="b5" id="b5" value="4"><label for="b5"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="b5" id="b5" value="6"><label for="b5"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- pregunta c -->
+                            <label for="c5">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
+                            <input type="radio" name="c5" id="c5" value="0"><label for="c5"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c5" id="c5" value="2"><label for="c5"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="c5" id="c5" value="3"><label for="c5"> CADA MES</label> <br> <br>
+                            <input type="radio" name="c5" id="c5" value="4"><label for="c5"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="c5" id="c5" value="6"><label for="c5"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <!-- pregunta d -->
+                            <label for="d5">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
+                            <input type="radio" name="d5" id="d5" value="0"><label for="d5"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d5" id="d5" value="2"><label for="d5"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="d5" id="d5" value="3"><label for="d5"> CADA MES</label> <br> <br>
+                            <input type="radio" name="d5" id="d5" value="4"><label for="d5"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="d5" id="d5" value="6"><label for="d5"> A DIARIO O CASI DIARIO</label> <br> <br>
+                        </div>
 
                         <!-- SEXTA parte de consumo de drogas -->
-                        <h4>6. ¿Un amigo, un familiar o alguien más alguna vez ha mostrado preocupación por tu consumo de estas drogas?</h4>
-                        <!-- pregunta a -->
-                        <label for="a6">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                        <input type="radio" name="a6" id="a6" value="0"><label for="a6"> NUNCA</label> <br> <br>
-                        <input type="radio" name="a6" id="a6" value="6"><label for="a6"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                        <input type="radio" name="a6" id="a6" value="3"><label for="a6"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
-    
-                        <!-- pregunta b -->
-                        <label for="b6">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                        <input type="radio" name="b6" id="b6" value="0"><label for="b6"> NUNCA</label> <br> <br>
-                        <input type="radio" name="b6" id="b6" value="6"><label for="b6"> SI, EN LOS ULTIMOS 3 MESES</label> <br> <br>
-                        <input type="radio" name="b6" id="b6" value="3"><label for="b6"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
-    
-                        <!-- pregunta c -->
-                        <label for="c6">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                        <input type="radio" name="c6" id="c6" value="0"><label for="c6"> NUNCA</label> <br> <br>
-                        <input type="radio" name="c6" id="c6" value="6"><label for="c6"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                        <input type="radio" name="c6" id="c6" value="3"><label for="c6"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
-                        <!-- pregunta d -->
-                        <label for="d6">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                        <input type="radio" name="d6" id="d6" value="0"><label for="d6"> NUNCA</label> <br> <br>
-                        <input type="radio" name="d6" id="d6" value="6"><label for="d6"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                        <input type="radio" name="d6" id="d6" value="3"><label for="d6"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                        <div id="Pregunta6">
+                            <h4>6. ¿Un amigo, un familiar o alguien más alguna vez ha mostrado preocupación por tu consumo de estas drogas?</h4>
+                            <!-- pregunta a -->
+                            <label for="a6">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
+                            <input type="radio" name="a6" id="a6" value="0"><label for="a6"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a6" id="a6" value="6"><label for="a6"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="a6" id="a6" value="3"><label for="a6"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+        
+                            <!-- pregunta b -->
+                            <label for="b6">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
+                            <input type="radio" name="b6" id="b6" value="0"><label for="b6"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b6" id="b6" value="6"><label for="b6"> SI, EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <input type="radio" name="b6" id="b6" value="3"><label for="b6"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+        
+                            <!-- pregunta c -->
+                            <label for="c6">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
+                            <input type="radio" name="c6" id="c6" value="0"><label for="c6"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c6" id="c6" value="6"><label for="c6"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="c6" id="c6" value="3"><label for="c6"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <!-- pregunta d -->
+                            <label for="d6">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
+                            <input type="radio" name="d6" id="d6" value="0"><label for="d6"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d6" id="d6" value="6"><label for="d6"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="d6" id="d6" value="3"><label for="d6"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                        </div>
 
                         <!-- SEPTIMA parte de consumo de drogas -->
-                        <h4>7. ¿HAS INTENTADO ALGUNA VEZ CONTROLAR, REDUCIR O DEJAR DE CONSUMIR ESTAS DROGAS Y NO LO HAS LOGRADO?</h4>
-                        <!-- pregunta a -->
-                        <label for="a7">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                        <input type="radio" name="a7" id="a7" value="0"><label for="a7"> NUNCA</label> <br> <br>
-                        <input type="radio" name="a7" id="a7" value="6"><label for="a7"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                        <input type="radio" name="a7" id="a7" value="3"><label for="a7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
-    
-                        <!-- pregunta b -->
-                        <label for="b7">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                        <input type="radio" name="b7" id="b7" value="0"><label for="b7"> NUNCA</label> <br> <br>
-                        <input type="radio" name="b7" id="b7" value="6"><label for="b7"> SI, EN LOS ULTIMOS 3 MESES</label> <br> <br>
-                        <input type="radio" name="b7" id="b7" value="3"><label for="b7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
-    
-                        <!-- pregunta c -->
-                        <label for="c7">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                        <input type="radio" name="c7" id="c7" value="0"><label for="c7"> NUNCA</label> <br> <br>
-                        <input type="radio" name="c7" id="c7" value="6"><label for="c7"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                        <input type="radio" name="c7" id="c7" value="3"><label for="c7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
-                        <!-- pregunta d -->
-                        <label for="d7">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                        <input type="radio" name="d7" id="d7" value="0"><label for="d7"> NUNCA</label> <br> <br>
-                        <input type="radio" name="d7" id="d7" value="6"><label for="d7"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                        <input type="radio" name="d7" id="d7" value="3"><label for="d7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                        <div id="Pregunta7">
+                            <h4>7. ¿HAS INTENTADO ALGUNA VEZ CONTROLAR, REDUCIR O DEJAR DE CONSUMIR ESTAS DROGAS Y NO LO HAS LOGRADO?</h4>
+                            <!-- pregunta a -->
+                            <label for="a7">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
+                            <input type="radio" name="a7" id="a7" value="0"><label for="a7"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a7" id="a7" value="6"><label for="a7"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="a7" id="a7" value="3"><label for="a7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+        
+                            <!-- pregunta b -->
+                            <label for="b7">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
+                            <input type="radio" name="b7" id="b7" value="0"><label for="b7"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b7" id="b7" value="6"><label for="b7"> SI, EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <input type="radio" name="b7" id="b7" value="3"><label for="b7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+        
+                            <!-- pregunta c -->
+                            <label for="c7">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
+                            <input type="radio" name="c7" id="c7" value="0"><label for="c7"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c7" id="c7" value="6"><label for="c7"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="c7" id="c7" value="3"><label for="c7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <!-- pregunta d -->
+                            <label for="d7">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
+                            <input type="radio" name="d7" id="d7" value="0"><label for="d7"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d7" id="d7" value="6"><label for="d7"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="d7" id="d7" value="3"><label for="d7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                        </div>
 
                         <!-- OCTAVA parte de consumo de drogas -->
-                        <!-- <h4>. ¿HAS INTENTADO ALGUNA VEZ CONTROLAR, REDUCIR O DEJAR DE CONSUMIR ESTAS DROGAS Y NO LO HAS LOGRADO?</h4> -->
-                        <!-- pregunta a -->
-                        <h4><label for="a7">8.¿HAS CONSUMIDO ALGUNA VEZ ALGUNA DROGA POR VIA INYECTADA?</label></h4>
-                        <input type="radio" name="a7" id="a7" value="0"><label for="a7"> NUNCA</label> <br> <br>
-                        <input type="radio" name="a7" id="a7" value="2"><label for="a7"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                        <input type="radio" name="a7" id="a7" value="1"><label for="a7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
-                        <div>
-                            <!-- AQUI VAN LOS RESULTADOS QUE DEBEN DE MARCAR DEL EXCEL -->
+                        <div id="Pregunta8">
+                            <!-- <h4>. ¿HAS INTENTADO ALGUNA VEZ CONTROLAR, REDUCIR O DEJAR DE CONSUMIR ESTAS DROGAS Y NO LO HAS LOGRADO?</h4> -->
+                            <!-- pregunta a -->
+                            <h4><label for="a7">8.¿HAS CONSUMIDO ALGUNA VEZ ALGUNA DROGA POR VIA INYECTADA?</label></h4>
+                            <input type="radio" name="a7" id="a7" value="0"><label for="a7"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a7" id="a7" value="2"><label for="a7"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="a7" id="a7" value="1"><label for="a7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <div>
+                                <!-- AQUI VAN LOS RESULTADOS QUE DEBEN DE MARCAR DEL EXCEL -->
+                            </div>
                         </div>
                         <hr>
 
@@ -703,6 +723,39 @@
                 </fieldset>
 
             </article>
+
+            <script>
+                setInterval(chek1, 500);
+
+                function chek1() {
+                    if(document.getElementById('a11').checked || document.getElementById('b11').checked || document.getElementById('c11').checked || document.getElementById('d11').checked){
+                        document.getElementById('Pregunta2').style.display="block";
+                        document.getElementById('Pregunta3').style.display="block";
+                        document.getElementById('Pregunta4').style.display="block";
+                        document.getElementById('Pregunta5').style.display="block";
+                        document.getElementById('Pregunta6').style.display="block";
+                        document.getElementById('Pregunta7').style.display="block";
+                        document.getElementById('Pregunta8').style.display="block";
+                    }else if(document.getElementById('a12').checked && document.getElementById('b12').checked && document.getElementById('c12').checked && document.getElementById('d12').checked){
+                        document.getElementById('Pregunta2').style.display="none";
+                        document.getElementById('Pregunta3').style.display="none";
+                        document.getElementById('Pregunta4').style.display="none";
+                        document.getElementById('Pregunta5').style.display="none";
+                        document.getElementById('Pregunta6').style.display="none";
+                        document.getElementById('Pregunta7').style.display="none";
+                        document.getElementById('Pregunta8').style.display="none";
+                    }
+                    if(document.getElementById('a21').checked && document.getElementById('b21').checked && document.getElementById('c21').checked && document.getElementById('d21').checked){
+                        document.getElementById('Pregunta3').style.display="none";
+                        document.getElementById('Pregunta4').style.display="none";
+                        document.getElementById('Pregunta5').style.display="none";
+                        document.getElementById('Pregunta6').style.display="none";
+                        document.getElementById('Pregunta7').style.display="none";
+                        document.getElementById('Pregunta8').style.display="none";
+                    }else 
+                }
+            </script>
+
             <!-- aqui termina CONSUMO DE SUSTANCIAS -->
 
             <!-- AQUI COMIENZA SALUD SEXUAL -->
