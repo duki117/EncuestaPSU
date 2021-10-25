@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>PES</title>
 </head>
-<body>
+<!--Funcion Chek1() es llamada al terminar de cargar la pagina para corroborar que las preguntas disponibles sean acordes a las respuestas seleccionadas  DANIEL-->
+<body onload="chek1()">
     <!-- HEADER "TITULO" -->
     <div class="header">
         <h1 id="titulo-pes">P.E.S.</h1>
@@ -412,12 +413,47 @@
 
             <!-- aqui empieza consumo de sustancias -->
 
+            
+
             <article class="consumsust" id="consumsust">
                 <fieldset>
                     <legend>CONSUMO DE SUSTANCIAS</legend>
                     <form action="#">
 
-                    
+                        <script>
+                            //Funcion Chek1 verifica que radioButons estan chekados para decidir si ocultar o no las preguntas relacionadas sobre consumo de Drogas    DANIEL.
+                            function chek1() {
+                                //x compara que todas las opciones "NO" de la pregunta 1 esten seleccionadas    DANIEL
+                                //y compara que todas las opciones "NUNCA" de la pregunta 2 esten seleccionadas    DANIEL
+                                let x= document.getElementById('a12').checked && document.getElementById('b12').checked && document.getElementById('c12').checked && document.getElementById('d12').checked;
+                                let y= document.getElementById('a21').checked && document.getElementById('b21').checked && document.getElementById('c21').checked && document.getElementById('d21').checked;
+                                if(x){
+                                    document.getElementById('Pregunta2').style.display="none";
+                                    document.getElementById('Pregunta3').style.display="none";
+                                    document.getElementById('Pregunta4').style.display="none";
+                                    document.getElementById('Pregunta5').style.display="none";
+                                    document.getElementById('Pregunta6').style.display="none";
+                                    document.getElementById('Pregunta7').style.display="none";
+                                    document.getElementById('Pregunta8').style.display="none";
+                                }else if(y){
+                                    document.getElementById('Pregunta2').style.display="block";
+                                    document.getElementById('Pregunta3').style.display="none";
+                                    document.getElementById('Pregunta4').style.display="none";
+                                    document.getElementById('Pregunta5').style.display="none";
+                                    document.getElementById('Pregunta6').style.display="none";
+                                    document.getElementById('Pregunta7').style.display="none";
+                                    document.getElementById('Pregunta8').style.display="none";
+                                }else{
+                                    document.getElementById('Pregunta2').style.display="block";
+                                    document.getElementById('Pregunta3').style.display="block";
+                                    document.getElementById('Pregunta4').style.display="block";
+                                    document.getElementById('Pregunta5').style.display="block";
+                                    document.getElementById('Pregunta6').style.display="block";
+                                    document.getElementById('Pregunta7').style.display="block";
+                                    document.getElementById('Pregunta8').style.display="block";
+                                }
+                            }
+                        </script>
 
                         <!-- primera parte del formulario -->
                         <div id="Pregunta1">
@@ -427,20 +463,20 @@
                             <h4>01. A lo largo de tu Vida, ¿Cuál de las siguientes sustancias has consumido alguna vez?</h4>
                             <!-- pregunta a -->
                             <label for="a1">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                            <input type="radio" name="a1" id="a11" value="1"><label for="a11">1 - SI</label> <br>
-                            <input type="radio" name="a1" id="a12" value="0"><label for="a12">2 - NO</label> <br> <br>
+                            <input type="radio" name="a1" id="a11" value="1" onclick="chek1()"><label for="a11">1 - SI</label> <br>
+                            <input type="radio" name="a1" id="a12" value="0" onclick="chek1()"><label for="a12">2 - NO</label> <br> <br>
                             <!-- pregunta b -->
                             <label for="b1">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                            <input type="radio" name="b1" id="b11" value="1"><label for="b11">1 - SI</label> <br>
-                            <input type="radio" name="b1" id="b12" value="0"><label for="b12">2 - NO</label> <br> <br>
+                            <input type="radio" name="b1" id="b11" value="1" onclick="chek1()"><label for="b11">1 - SI</label> <br>
+                            <input type="radio" name="b1" id="b12" value="0" onclick="chek1()"><label for="b12">2 - NO</label> <br> <br>
                             <!-- pregunta c -->
                             <label for="c1">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                            <input type="radio" name="c1" id="c11" value="1"><label for="c11">1 - SI</label> <br>
-                            <input type="radio" name="c1" id="c12" value="0"><label for="c12">2 - NO</label> <br> <br>
+                            <input type="radio" name="c1" id="c11" value="1" onclick="chek1()"><label for="c11">1 - SI</label> <br>
+                            <input type="radio" name="c1" id="c12" value="0" onclick="chek1()"><label for="c12">2 - NO</label> <br> <br>
                             <!-- pregunta d -->
                             <label for="d1">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                            <input type="radio" name="d1" id="d11" value="1"><label for="d11">1 - SI</label> <br>
-                            <input type="radio" name="d1" id="d12" value="0"><label for="d12">2 - NO</label> <br> <br>
+                            <input type="radio" name="d1" id="d11" value="1" onclick="chek1()"><label for="d11">1 - SI</label> <br>
+                            <input type="radio" name="d1" id="d12" value="0" onclick="chek1()"><label for="d12">2 - NO</label> <br> <br>
 
                             <!-- INPUT OCULTO PARA CONTROLAR LOS ENVIOS DE INFORMACION POR METODO POST-->
                             <input type="hidden" name="pregunta" id="pregunta" value="1">
@@ -452,32 +488,32 @@
                             <h4>2. Con que frecuencia has consumido las sustancias que mencionaste en los últimos tres meses?</h4>
                             <!-- pregunta a -->
                             <label for="a2">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                            <input type="radio" name="a2" id="a21" value="0"><label for="a21"> NUNCA</label> <br> <br>
-                            <input type="radio" name="a2" id="a22" value="2"><label for="a22"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="a2" id="a23" value="3"><label for="a23"> CADA MES</label> <br> <br>
-                            <input type="radio" name="a2" id="a24" value="4"><label for="a24"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="a2" id="a25" value="6"><label for="a25"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="a2" id="a21" value="0" onclick="chek1()"><label for="a21"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a2" id="a22" value="2" onclick="chek1()"><label for="a22"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="a2" id="a23" value="3" onclick="chek1()"><label for="a23"> CADA MES</label> <br> <br>
+                            <input type="radio" name="a2" id="a24" value="4" onclick="chek1()"><label for="a24"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="a2" id="a25" value="6" onclick="chek1()"><label for="a25"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta b -->
                             <label for="b2">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                            <input type="radio" name="b2" id="b21" value="0"><label for="b21"> NUNCA</label> <br> <br>
-                            <input type="radio" name="b2" id="b22" value="2"><label for="b22"> 1 O 2 VECES</label> <br> <br>
-                            <input type="radio" name="b2" id="b23" value="3"><label for="b23"> CADA MES</label> <br> <br>
-                            <input type="radio" name="b2" id="b24" value="4"><label for="b24"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="b2" id="b25" value="6"><label for="b25"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="b2" id="b21" value="0" onclick="chek1()"><label for="b21"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b2" id="b22" value="2" onclick="chek1()"><label for="b22"> 1 O 2 VECES</label> <br> <br>
+                            <input type="radio" name="b2" id="b23" value="3" onclick="chek1()"><label for="b23"> CADA MES</label> <br> <br>
+                            <input type="radio" name="b2" id="b24" value="4" onclick="chek1()"><label for="b24"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="b2" id="b25" value="6" onclick="chek1()"><label for="b25"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta c -->
                             <label for="c2">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                            <input type="radio" name="c2" id="c21" value="0"><label for="c21"> NUNCA</label> <br> <br>
-                            <input type="radio" name="c2" id="c22" value="2"><label for="c22"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="c2" id="c23" value="3"><label for="c23"> CADA MES</label> <br> <br>
-                            <input type="radio" name="c2" id="c24" value="4"><label for="c24"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="c2" id="c25" value="6"><label for="c25"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="c2" id="c21" value="0" onclick="chek1()"><label for="c21"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c2" id="c22" value="2" onclick="chek1()"><label for="c22"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="c2" id="c23" value="3" onclick="chek1()"><label for="c23"> CADA MES</label> <br> <br>
+                            <input type="radio" name="c2" id="c24" value="4" onclick="chek1()"><label for="c24"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="c2" id="c25" value="6" onclick="chek1()"><label for="c25"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta d -->
                             <label for="d2">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                            <input type="radio" name="d2" id="d21" value="0"><label for="d21"> NUNCA</label> <br> <br>
-                            <input type="radio" name="d2" id="d22" value="2"><label for="d22"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="d2" id="d23" value="3"><label for="d23"> CADA MES</label> <br> <br>
-                            <input type="radio" name="d2" id="d24" value="4"><label for="d24"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="d2" id="d25" value="6"><label for="d25"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="d2" id="d21" value="0" onclick="chek1()"><label for="d21"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d2" id="d22" value="2" onclick="chek1()"><label for="d22"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="d2" id="d23" value="3" onclick="chek1()"><label for="d23"> CADA MES</label> <br> <br>
+                            <input type="radio" name="d2" id="d24" value="4" onclick="chek1()"><label for="d24"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="d2" id="d25" value="6" onclick="chek1()"><label for="d25"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- SI LA PERSONA PONE QUE NO LO HA HECHO LINKEALO A LA PREGUNTA 9 Y BLOQUEA TODAS LAS PREGUNTAS DE AQUI ABAJO -->
                         </div>
 
@@ -723,38 +759,6 @@
                 </fieldset>
 
             </article>
-
-            <script>
-                setInterval(chek1, 500);
-
-                function chek1() {
-                    if(document.getElementById('a11').checked || document.getElementById('b11').checked || document.getElementById('c11').checked || document.getElementById('d11').checked){
-                        document.getElementById('Pregunta2').style.display="block";
-                        document.getElementById('Pregunta3').style.display="block";
-                        document.getElementById('Pregunta4').style.display="block";
-                        document.getElementById('Pregunta5').style.display="block";
-                        document.getElementById('Pregunta6').style.display="block";
-                        document.getElementById('Pregunta7').style.display="block";
-                        document.getElementById('Pregunta8').style.display="block";
-                    }else if(document.getElementById('a12').checked && document.getElementById('b12').checked && document.getElementById('c12').checked && document.getElementById('d12').checked){
-                        document.getElementById('Pregunta2').style.display="none";
-                        document.getElementById('Pregunta3').style.display="none";
-                        document.getElementById('Pregunta4').style.display="none";
-                        document.getElementById('Pregunta5').style.display="none";
-                        document.getElementById('Pregunta6').style.display="none";
-                        document.getElementById('Pregunta7').style.display="none";
-                        document.getElementById('Pregunta8').style.display="none";
-                    }
-                    if(document.getElementById('a21').checked && document.getElementById('b21').checked && document.getElementById('c21').checked && document.getElementById('d21').checked){
-                        document.getElementById('Pregunta3').style.display="none";
-                        document.getElementById('Pregunta4').style.display="none";
-                        document.getElementById('Pregunta5').style.display="none";
-                        document.getElementById('Pregunta6').style.display="none";
-                        document.getElementById('Pregunta7').style.display="none";
-                        document.getElementById('Pregunta8').style.display="none";
-                    }else 
-                }
-            </script>
 
             <!-- aqui termina CONSUMO DE SUSTANCIAS -->
 
