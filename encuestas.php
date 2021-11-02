@@ -412,13 +412,10 @@
             </article>
 
             <!-- aqui empieza consumo de sustancias -->
-
-            
-
             <article class="consumsust" id="consumsust">
                 <fieldset>
                     <legend>CONSUMO DE SUSTANCIAS</legend>
-                    <form action="#">
+                    <form action="server.php" method="post">
 
                         <script>
                             //Funcion Chek1 verifica que radioButons estan chekados para decidir si ocultar o no las preguntas relacionadas sobre consumo de Drogas    DANIEL.
@@ -453,8 +450,171 @@
                                     document.getElementById('Pregunta8').style.display="block";
                                 }
                             }
-                        </script>
 
+                            //Funcion calc calcula el riesgo de la primera parte de consumo de sustancias    DANIEL
+                            function calc(){
+                                //se crean variables para sumar los puntos de las respuestas    DANIEL
+                                var totalTabaco=0;
+                                var totalAlcohol=0;
+                                var totalCannabis=0;
+                                var totalOtras=0;
+                                //Se comprueba que radio esta seleccionado y se suma a su respectiva variable    DANIEL
+                                //se calcula el puntaje de tabaco    DANIEL
+                                if(document.getElementById('a11').checked)totalTabaco+=Number(document.getElementById('a11').value);
+                                if(document.getElementById('a12').checked)totalTabaco+=Number(document.getElementById('a12').value);
+                                if(document.getElementById('a21').checked)totalTabaco+=Number(document.getElementById('a21').value);
+                                if(document.getElementById('a22').checked)totalTabaco+=Number(document.getElementById('a22').value);
+                                if(document.getElementById('a23').checked)totalTabaco+=Number(document.getElementById('a23').value);
+                                if(document.getElementById('a24').checked)totalTabaco+=Number(document.getElementById('a24').value);
+                                if(document.getElementById('a25').checked)totalTabaco+=Number(document.getElementById('a25').value);
+                                if(document.getElementById('a31').checked)totalTabaco+=Number(document.getElementById('a31').value);
+                                if(document.getElementById('a32').checked)totalTabaco+=Number(document.getElementById('a32').value);
+                                if(document.getElementById('a33').checked)totalTabaco+=Number(document.getElementById('a33').value);
+                                if(document.getElementById('a34').checked)totalTabaco+=Number(document.getElementById('a34').value);
+                                if(document.getElementById('a35').checked)totalTabaco+=Number(document.getElementById('a35').value);
+                                if(document.getElementById('a41').checked)totalTabaco+=Number(document.getElementById('a41').value);
+                                if(document.getElementById('a42').checked)totalTabaco+=Number(document.getElementById('a42').value);
+                                if(document.getElementById('a43').checked)totalTabaco+=Number(document.getElementById('a43').value);
+                                if(document.getElementById('a44').checked)totalTabaco+=Number(document.getElementById('a44').value);
+                                if(document.getElementById('a45').checked)totalTabaco+=Number(document.getElementById('a45').value);
+                                if(document.getElementById('a51').checked)totalTabaco+=Number(document.getElementById('a51').value);
+                                if(document.getElementById('a52').checked)totalTabaco+=Number(document.getElementById('a52').value);
+                                if(document.getElementById('a53').checked)totalTabaco+=Number(document.getElementById('a53').value);
+                                if(document.getElementById('a54').checked)totalTabaco+=Number(document.getElementById('a54').value);
+                                if(document.getElementById('a55').checked)totalTabaco+=Number(document.getElementById('a55').value);
+                                if(document.getElementById('a61').checked)totalTabaco+=Number(document.getElementById('a61').value);
+                                if(document.getElementById('a62').checked)totalTabaco+=Number(document.getElementById('a62').value);
+                                if(document.getElementById('a63').checked)totalTabaco+=Number(document.getElementById('a63').value);
+                                if(document.getElementById('a71').checked)totalTabaco+=Number(document.getElementById('a71').value);
+                                if(document.getElementById('a72').checked)totalTabaco+=Number(document.getElementById('a72').value);
+                                if(document.getElementById('a73').checked)totalTabaco+=Number(document.getElementById('a73').value);
+                                
+                                //se calcula el puntaje de alcohol     DANIEL
+                                if(document.getElementById('b11').checked)totalAlcohol+=Number(document.getElementById('b11').value);
+                                if(document.getElementById('b12').checked)totalAlcohol+=Number(document.getElementById('b12').value);
+                                if(document.getElementById('b21').checked)totalAlcohol+=Number(document.getElementById('b21').value);
+                                if(document.getElementById('b22').checked)totalAlcohol+=Number(document.getElementById('b22').value);
+                                if(document.getElementById('b23').checked)totalAlcohol+=Number(document.getElementById('b23').value);
+                                if(document.getElementById('b24').checked)totalAlcohol+=Number(document.getElementById('b24').value);
+                                if(document.getElementById('b25').checked)totalAlcohol+=Number(document.getElementById('b25').value);
+                                if(document.getElementById('b31').checked)totalAlcohol+=Number(document.getElementById('b31').value);
+                                if(document.getElementById('b32').checked)totalAlcohol+=Number(document.getElementById('b32').value);
+                                if(document.getElementById('b33').checked)totalAlcohol+=Number(document.getElementById('b33').value);
+                                if(document.getElementById('b34').checked)totalAlcohol+=Number(document.getElementById('b34').value);
+                                if(document.getElementById('b35').checked)totalAlcohol+=Number(document.getElementById('b35').value);
+                                if(document.getElementById('b41').checked)totalAlcohol+=Number(document.getElementById('b41').value);
+                                if(document.getElementById('b42').checked)totalAlcohol+=Number(document.getElementById('b42').value);
+                                if(document.getElementById('b43').checked)totalAlcohol+=Number(document.getElementById('b43').value);
+                                if(document.getElementById('b44').checked)totalAlcohol+=Number(document.getElementById('b44').value);
+                                if(document.getElementById('b45').checked)totalAlcohol+=Number(document.getElementById('b45').value);
+                                if(document.getElementById('b51').checked)totalAlcohol+=Number(document.getElementById('b51').value);
+                                if(document.getElementById('b52').checked)totalAlcohol+=Number(document.getElementById('b52').value);
+                                if(document.getElementById('b53').checked)totalAlcohol+=Number(document.getElementById('b53').value);
+                                if(document.getElementById('b54').checked)totalAlcohol+=Number(document.getElementById('b54').value);
+                                if(document.getElementById('b55').checked)totalAlcohol+=Number(document.getElementById('b55').value);
+                                if(document.getElementById('b61').checked)totalAlcohol+=Number(document.getElementById('b61').value);
+                                if(document.getElementById('b62').checked)totalAlcohol+=Number(document.getElementById('b62').value);
+                                if(document.getElementById('b63').checked)totalAlcohol+=Number(document.getElementById('b63').value);
+                                if(document.getElementById('b71').checked)totalAlcohol+=Number(document.getElementById('b71').value);
+                                if(document.getElementById('b72').checked)totalAlcohol+=Number(document.getElementById('b72').value);
+                                if(document.getElementById('b73').checked)totalAlcohol+=Number(document.getElementById('b73').value);
+
+                                //se calcula el puntaje de cannabis    DANIEL
+                                if(document.getElementById('c11').checked)totalCannabis+=Number(document.getElementById('c11').value);
+                                if(document.getElementById('c12').checked)totalCannabis+=Number(document.getElementById('c12').value);
+                                if(document.getElementById('c21').checked)totalCannabis+=Number(document.getElementById('c21').value);
+                                if(document.getElementById('c22').checked)totalCannabis+=Number(document.getElementById('c22').value);
+                                if(document.getElementById('c23').checked)totalCannabis+=Number(document.getElementById('c23').value);
+                                if(document.getElementById('c24').checked)totalCannabis+=Number(document.getElementById('c24').value);
+                                if(document.getElementById('c25').checked)totalCannabis+=Number(document.getElementById('c25').value);
+                                if(document.getElementById('c31').checked)totalCannabis+=Number(document.getElementById('c31').value);
+                                if(document.getElementById('c32').checked)totalCannabis+=Number(document.getElementById('c32').value);
+                                if(document.getElementById('c33').checked)totalCannabis+=Number(document.getElementById('c33').value);
+                                if(document.getElementById('c34').checked)totalCannabis+=Number(document.getElementById('c34').value);
+                                if(document.getElementById('c35').checked)totalCannabis+=Number(document.getElementById('c35').value);
+                                if(document.getElementById('c41').checked)totalCannabis+=Number(document.getElementById('c41').value);
+                                if(document.getElementById('c42').checked)totalCannabis+=Number(document.getElementById('c42').value);
+                                if(document.getElementById('c43').checked)totalCannabis+=Number(document.getElementById('c43').value);
+                                if(document.getElementById('c44').checked)totalCannabis+=Number(document.getElementById('c44').value);
+                                if(document.getElementById('c45').checked)totalCannabis+=Number(document.getElementById('c45').value);
+                                if(document.getElementById('c51').checked)totalCannabis+=Number(document.getElementById('c51').value);
+                                if(document.getElementById('c52').checked)totalCannabis+=Number(document.getElementById('c52').value);
+                                if(document.getElementById('c53').checked)totalCannabis+=Number(document.getElementById('c53').value);
+                                if(document.getElementById('c54').checked)totalCannabis+=Number(document.getElementById('c54').value);
+                                if(document.getElementById('c55').checked)totalCannabis+=Number(document.getElementById('c55').value);
+                                if(document.getElementById('c61').checked)totalCannabis+=Number(document.getElementById('c61').value);
+                                if(document.getElementById('c62').checked)totalCannabis+=Number(document.getElementById('c62').value);
+                                if(document.getElementById('c63').checked)totalCannabis+=Number(document.getElementById('c63').value);
+                                if(document.getElementById('c71').checked)totalCannabis+=Number(document.getElementById('c71').value);
+                                if(document.getElementById('c72').checked)totalCannabis+=Number(document.getElementById('c72').value);
+                                if(document.getElementById('c73').checked)totalCannabis+=Number(document.getElementById('c73').value);
+
+                                //se calcula el punteje de otras drogas     DANIEL
+                                if(document.getElementById('d11').checked)totalOtras+=Number(document.getElementById('d11').value);
+                                if(document.getElementById('d12').checked)totalOtras+=Number(document.getElementById('d12').value);
+                                if(document.getElementById('d21').checked)totalOtras+=Number(document.getElementById('d21').value);
+                                if(document.getElementById('d22').checked)totalOtras+=Number(document.getElementById('d22').value);
+                                if(document.getElementById('d23').checked)totalOtras+=Number(document.getElementById('d23').value);
+                                if(document.getElementById('d24').checked)totalOtras+=Number(document.getElementById('d24').value);
+                                if(document.getElementById('d25').checked)totalOtras+=Number(document.getElementById('d25').value);
+                                if(document.getElementById('d31').checked)totalOtras+=Number(document.getElementById('d31').value);
+                                if(document.getElementById('d32').checked)totalOtras+=Number(document.getElementById('d32').value);
+                                if(document.getElementById('d33').checked)totalOtras+=Number(document.getElementById('d33').value);
+                                if(document.getElementById('d34').checked)totalOtras+=Number(document.getElementById('d34').value);
+                                if(document.getElementById('d35').checked)totalOtras+=Number(document.getElementById('d35').value);
+                                if(document.getElementById('d41').checked)totalOtras+=Number(document.getElementById('d41').value);
+                                if(document.getElementById('d42').checked)totalOtras+=Number(document.getElementById('d42').value);
+                                if(document.getElementById('d43').checked)totalOtras+=Number(document.getElementById('d43').value);
+                                if(document.getElementById('d44').checked)totalOtras+=Number(document.getElementById('d44').value);
+                                if(document.getElementById('d45').checked)totalOtras+=Number(document.getElementById('d45').value);
+                                if(document.getElementById('d51').checked)totalOtras+=Number(document.getElementById('d51').value);
+                                if(document.getElementById('d52').checked)totalOtras+=Number(document.getElementById('d52').value);
+                                if(document.getElementById('d53').checked)totalOtras+=Number(document.getElementById('d53').value);
+                                if(document.getElementById('d54').checked)totalOtras+=Number(document.getElementById('d54').value);
+                                if(document.getElementById('d55').checked)totalOtras+=Number(document.getElementById('d55').value);
+                                if(document.getElementById('d61').checked)totalOtras+=Number(document.getElementById('d61').value);
+                                if(document.getElementById('d62').checked)totalOtras+=Number(document.getElementById('d62').value);
+                                if(document.getElementById('d63').checked)totalOtras+=Number(document.getElementById('d63').value);
+                                if(document.getElementById('d71').checked)totalOtras+=Number(document.getElementById('d71').value);
+                                if(document.getElementById('d72').checked)totalOtras+=Number(document.getElementById('d72').value);
+                                if(document.getElementById('d73').checked)totalOtras+=Number(document.getElementById('d73').value);
+
+                                //Se decide si necesita algun tratamiento o no y si debe ser intensivo o breve.    DANIEL
+                                //se muestran los resultados de tabaco    DANIEL
+                                if(totalTabaco>26){
+                                    document.getElementById('resTabaco').innerHTML='Usted está  en riesgo. Requiere de un tratamiento Intensivo';
+                                }else if(totalTabaco>3){
+                                    document.getElementById('resTabaco').innerHTML='Su riesgo es moderado. Requiere de un tratamiento breve';
+                                }else{
+                                    document.getElementById('resTabaco').innerHTML='Su riesgo es mínimo. No requiere de ningún  tipo de tratamiento';
+                                }
+
+                                //se muestran los resultados de alcohol    DANIEL
+                                if(totalAlcohol>26){
+                                    document.getElementById('resAlcohol').innerHTML='Usted está  en riesgo. Requiere de un tratamiento Intensivo';
+                                }else if(totalAlcohol>10){
+                                    document.getElementById('resAlcohol').innerHTML='Su riesgo es moderado. Requiere de un tratamiento breve';
+                                }else{
+                                    document.getElementById('resAlcohol').innerHTML='Su riesgo es mínimo. No requiere de ningún  tipo de tratamiento';
+                                }
+
+                                //se muestran los resultados de cannabis    DANIEL
+                                if(totalCannabis>26){
+                                    document.getElementById('resCannabis').innerHTML='Usted está  en riesgo. Requiere de un tratamiento Intensivo';
+                                }else if(totalCannabis>4){
+                                    document.getElementById('resCannabis').innerHTML='Su riesgo es moderado. Requiere de un tratamiento breve';
+                                }else{
+                                    document.getElementById('resCannabis').innerHTML='Su riesgo es mínimo. No requiere de ningún  tipo de tratamiento';
+                                }
+
+                                //se muestran los resultados de otras drgas    DANIEL
+                                if(totalOtras>26){
+                                    document.getElementById('resOtras').innerHTML='Usted está  en riesgo. Requiere de un tratamiento Intensivo';
+                                }else{
+                                    document.getElementById('resOtras').innerHTML='Su riesgo es moderado. Requiere de un tratamiento breve';
+                                }
+                            }
+                        </script>
                         <!-- primera parte del formulario -->
                         <div id="Pregunta1">
                             <h3>CONSUMO DE DROGAS</h3>
@@ -463,20 +623,20 @@
                             <h4>01. A lo largo de tu Vida, ¿Cuál de las siguientes sustancias has consumido alguna vez?</h4>
                             <!-- pregunta a -->
                             <label for="a1">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                            <input type="radio" name="a1" id="a11" value="1" onclick="chek1()"><label for="a11">1 - SI</label> <br>
-                            <input type="radio" name="a1" id="a12" value="0" onclick="chek1()"><label for="a12">2 - NO</label> <br> <br>
+                            <input type="radio" name="a1" id="a11" value=1 onclick="chek1()"><label for="a11">1 - SI</label> <br>
+                            <input type="radio" name="a1" id="a12" value=0 onclick="chek1()"><label for="a12">2 - NO</label> <br> <br>
                             <!-- pregunta b -->
                             <label for="b1">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                            <input type="radio" name="b1" id="b11" value="1" onclick="chek1()"><label for="b11">1 - SI</label> <br>
-                            <input type="radio" name="b1" id="b12" value="0" onclick="chek1()"><label for="b12">2 - NO</label> <br> <br>
+                            <input type="radio" name="b1" id="b11" value=1 onclick="chek1()"><label for="b11">1 - SI</label> <br>
+                            <input type="radio" name="b1" id="b12" value=0 onclick="chek1()"><label for="b12">2 - NO</label> <br> <br>
                             <!-- pregunta c -->
                             <label for="c1">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                            <input type="radio" name="c1" id="c11" value="1" onclick="chek1()"><label for="c11">1 - SI</label> <br>
-                            <input type="radio" name="c1" id="c12" value="0" onclick="chek1()"><label for="c12">2 - NO</label> <br> <br>
+                            <input type="radio" name="c1" id="c11" value=1 onclick="chek1()"><label for="c11">1 - SI</label> <br>
+                            <input type="radio" name="c1" id="c12" value=0 onclick="chek1()"><label for="c12">2 - NO</label> <br> <br>
                             <!-- pregunta d -->
                             <label for="d1">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                            <input type="radio" name="d1" id="d11" value="1" onclick="chek1()"><label for="d11">1 - SI</label> <br>
-                            <input type="radio" name="d1" id="d12" value="0" onclick="chek1()"><label for="d12">2 - NO</label> <br> <br>
+                            <input type="radio" name="d1" id="d11" value=1 onclick="chek1()"><label for="d11">1 - SI</label> <br>
+                            <input type="radio" name="d1" id="d12" value=0 onclick="chek1()"><label for="d12">2 - NO</label> <br> <br>
 
                             <!-- INPUT OCULTO PARA CONTROLAR LOS ENVIOS DE INFORMACION POR METODO POST-->
                             <input type="hidden" name="pregunta" id="pregunta" value="1">
@@ -488,32 +648,32 @@
                             <h4>2. Con que frecuencia has consumido las sustancias que mencionaste en los últimos tres meses?</h4>
                             <!-- pregunta a -->
                             <label for="a2">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                            <input type="radio" name="a2" id="a21" value="0" onclick="chek1()"><label for="a21"> NUNCA</label> <br> <br>
-                            <input type="radio" name="a2" id="a22" value="2" onclick="chek1()"><label for="a22"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="a2" id="a23" value="3" onclick="chek1()"><label for="a23"> CADA MES</label> <br> <br>
-                            <input type="radio" name="a2" id="a24" value="4" onclick="chek1()"><label for="a24"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="a2" id="a25" value="6" onclick="chek1()"><label for="a25"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="a2" id="a21" value=0 onclick="chek1()"><label for="a21"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a2" id="a22" value=2 onclick="chek1()"><label for="a22"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="a2" id="a23" value=3 onclick="chek1()"><label for="a23"> CADA MES</label> <br> <br>
+                            <input type="radio" name="a2" id="a24" value=4 onclick="chek1()"><label for="a24"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="a2" id="a25" value=6 onclick="chek1()"><label for="a25"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta b -->
                             <label for="b2">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                            <input type="radio" name="b2" id="b21" value="0" onclick="chek1()"><label for="b21"> NUNCA</label> <br> <br>
-                            <input type="radio" name="b2" id="b22" value="2" onclick="chek1()"><label for="b22"> 1 O 2 VECES</label> <br> <br>
-                            <input type="radio" name="b2" id="b23" value="3" onclick="chek1()"><label for="b23"> CADA MES</label> <br> <br>
-                            <input type="radio" name="b2" id="b24" value="4" onclick="chek1()"><label for="b24"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="b2" id="b25" value="6" onclick="chek1()"><label for="b25"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="b2" id="b21" value=0 onclick="chek1()"><label for="b21"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b2" id="b22" value=2 onclick="chek1()"><label for="b22"> 1 O 2 VECES</label> <br> <br>
+                            <input type="radio" name="b2" id="b23" value=3 onclick="chek1()"><label for="b23"> CADA MES</label> <br> <br>
+                            <input type="radio" name="b2" id="b24" value=4 onclick="chek1()"><label for="b24"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="b2" id="b25" value=6 onclick="chek1()"><label for="b25"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta c -->
                             <label for="c2">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                            <input type="radio" name="c2" id="c21" value="0" onclick="chek1()"><label for="c21"> NUNCA</label> <br> <br>
-                            <input type="radio" name="c2" id="c22" value="2" onclick="chek1()"><label for="c22"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="c2" id="c23" value="3" onclick="chek1()"><label for="c23"> CADA MES</label> <br> <br>
-                            <input type="radio" name="c2" id="c24" value="4" onclick="chek1()"><label for="c24"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="c2" id="c25" value="6" onclick="chek1()"><label for="c25"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="c2" id="c21" value=0 onclick="chek1()"><label for="c21"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c2" id="c22" value=2 onclick="chek1()"><label for="c22"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="c2" id="c23" value=3 onclick="chek1()"><label for="c23"> CADA MES</label> <br> <br>
+                            <input type="radio" name="c2" id="c24" value=4 onclick="chek1()"><label for="c24"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="c2" id="c25" value=6 onclick="chek1()"><label for="c25"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta d -->
                             <label for="d2">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                            <input type="radio" name="d2" id="d21" value="0" onclick="chek1()"><label for="d21"> NUNCA</label> <br> <br>
-                            <input type="radio" name="d2" id="d22" value="2" onclick="chek1()"><label for="d22"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="d2" id="d23" value="3" onclick="chek1()"><label for="d23"> CADA MES</label> <br> <br>
-                            <input type="radio" name="d2" id="d24" value="4" onclick="chek1()"><label for="d24"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="d2" id="d25" value="6" onclick="chek1()"><label for="d25"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="d2" id="d21" value=0 onclick="chek1()"><label for="d21"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d2" id="d22" value=2 onclick="chek1()"><label for="d22"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="d2" id="d23" value=3 onclick="chek1()"><label for="d23"> CADA MES</label> <br> <br>
+                            <input type="radio" name="d2" id="d24" value=4 onclick="chek1()"><label for="d24"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="d2" id="d25" value=6 onclick="chek1()"><label for="d25"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- SI LA PERSONA PONE QUE NO LO HA HECHO LINKEALO A LA PREGUNTA 9 Y BLOQUEA TODAS LAS PREGUNTAS DE AQUI ABAJO -->
                         </div>
 
@@ -522,32 +682,32 @@
                             <h4>3. En los últimos tres meses, ¿Con qué frecuencia has tenido deseos fuertes o ansias de consumir la droga mencionada?</h4>
                             <!-- pregunta a -->
                             <label for="a3">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                            <input type="radio" name="a3" id="a3" value="0"><label for="a3"> NUNCA</label> <br> <br>
-                            <input type="radio" name="a3" id="a3" value="2"><label for="a3"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="a3" id="a3" value="3"><label for="a3"> CADA MES</label> <br> <br>
-                            <input type="radio" name="a3" id="a3" value="4"><label for="a3"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="a3" id="a3" value="6"><label for="a3"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="a3" id="a31" value=0><label for="a31"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a3" id="a32" value=2><label for="a32"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="a3" id="a33" value=3><label for="a33"> CADA MES</label> <br> <br>
+                            <input type="radio" name="a3" id="a34" value=4><label for="a34"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="a3" id="a35" value=6><label for="a35"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta b -->
                             <label for="b3">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                            <input type="radio" name="b3" id="b3" value="0"><label for="b3"> NUNCA</label> <br> <br>
-                            <input type="radio" name="b3" id="b3" value="2"><label for="b3"> 1 O 2 VECES</label> <br> <br>
-                            <input type="radio" name="b3" id="b3" value="3"><label for="b3"> CADA MES</label> <br> <br>
-                            <input type="radio" name="b3" id="b3" value="4"><label for="b3"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="b3" id="b3" value="6"><label for="b3"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="b3" id="b31" value=0><label for="b31"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b3" id="b32" value=2><label for="b32"> 1 O 2 VECES</label> <br> <br>
+                            <input type="radio" name="b3" id="b33" value=3><label for="b33"> CADA MES</label> <br> <br>
+                            <input type="radio" name="b3" id="b34" value=4><label for="b34"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="b3" id="b35" value=6><label for="b35"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta c -->
                             <label for="c3">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                            <input type="radio" name="c3" id="c3" value="0"><label for="c3"> NUNCA</label> <br> <br>
-                            <input type="radio" name="c3" id="c3" value="2"><label for="c3"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="c3" id="c3" value="3"><label for="c3"> CADA MES</label> <br> <br>
-                            <input type="radio" name="c3" id="c3" value="4"><label for="c3"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="c3" id="c3" value="6"><label for="c3"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="c3" id="c31" value="0"><label for="c31"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c3" id="c32" value="2"><label for="c32"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="c3" id="c33" value="3"><label for="c33"> CADA MES</label> <br> <br>
+                            <input type="radio" name="c3" id="c34" value="4"><label for="c34"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="c3" id="c35" value="6"><label for="c35"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta d -->
                             <label for="d3">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                            <input type="radio" name="d3" id="d3" value="0"><label for="d3"> NUNCA</label> <br> <br>
-                            <input type="radio" name="d3" id="d3" value="2"><label for="d3"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="d3" id="d3" value="3"><label for="d3"> CADA MES</label> <br> <br>
-                            <input type="radio" name="d3" id="d3" value="4"><label for="d3"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="d3" id="d3" value="6"><label for="d3"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="d3" id="d31" value="0"><label for="d31"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d3" id="d32" value="2"><label for="d32"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="d3" id="d33" value="3"><label for="d33"> CADA MES</label> <br> <br>
+                            <input type="radio" name="d3" id="d34" value="4"><label for="d34"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="d3" id="d35" value="6"><label for="d35"> A DIARIO O CASI DIARIO</label> <br> <br>
                         </div>
 
                          <!-- CUARTA parte de consumo de drogas -->
@@ -555,32 +715,32 @@
                             <h4>4. En los últimos tres meses, ¿Con qué frecuencia te ha llevado su consumo de esta droga a problemas de salud, sociales, legales o económicos?</h4>
                             <!-- pregunta a -->
                             <label for="a4">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                            <input type="radio" name="a4" id="a4" value="0"><label for="a4"> NUNCA</label> <br> <br>
-                            <input type="radio" name="a4" id="a4" value="2"><label for="a4"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="a4" id="a4" value="3"><label for="a4"> CADA MES</label> <br> <br>
-                            <input type="radio" name="a4" id="a4" value="4"><label for="a4"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="a4" id="a4" value="6"><label for="a4"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="a4" id="a41" value="0"><label for="a41"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a4" id="a42" value="2"><label for="a42"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="a4" id="a43" value="3"><label for="a43"> CADA MES</label> <br> <br>
+                            <input type="radio" name="a4" id="a44" value="4"><label for="a44"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="a4" id="a45" value="6"><label for="a45"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta b -->
                             <label for="b4">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                            <input type="radio" name="b4" id="b4" value="0"><label for="b4"> NUNCA</label> <br> <br>
-                            <input type="radio" name="b4" id="b4" value="2"><label for="b4"> 1 O 2 VECES</label> <br> <br>
-                            <input type="radio" name="b4" id="b4" value="3"><label for="b4"> CADA MES</label> <br> <br>
-                            <input type="radio" name="b4" id="b4" value="4"><label for="b4"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="b4" id="b4" value="6"><label for="b4"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="b4" id="b41" value="0"><label for="b41"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b4" id="b42" value="2"><label for="b42"> 1 O 2 VECES</label> <br> <br>
+                            <input type="radio" name="b4" id="b43" value="3"><label for="b43"> CADA MES</label> <br> <br>
+                            <input type="radio" name="b4" id="b44" value="4"><label for="b44"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="b4" id="b45" value="6"><label for="b45"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta c -->
                             <label for="c4">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                            <input type="radio" name="c4" id="c4" value="0"><label for="c4"> NUNCA</label> <br> <br>
-                            <input type="radio" name="c4" id="c4" value="2"><label for="c4"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="c4" id="c4" value="3"><label for="c4"> CADA MES</label> <br> <br>
-                            <input type="radio" name="c4" id="c4" value="4"><label for="c4"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="c4" id="c4" value="6"><label for="c4"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="c4" id="c41" value="0"><label for="c41"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c4" id="c42" value="2"><label for="c42"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="c4" id="c43" value="3"><label for="c43"> CADA MES</label> <br> <br>
+                            <input type="radio" name="c4" id="c44" value="4"><label for="c44"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="c4" id="c45" value="6"><label for="c45"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta d -->
                             <label for="d4">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                            <input type="radio" name="d4" id="d4" value="0"><label for="d4"> NUNCA</label> <br> <br>
-                            <input type="radio" name="d4" id="d4" value="2"><label for="d4"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="d4" id="d4" value="3"><label for="d4"> CADA MES</label> <br> <br>
-                            <input type="radio" name="d4" id="d4" value="4"><label for="d4"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="d4" id="d4" value="6"><label for="d4"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="d4" id="d41" value="0"><label for="d41"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d4" id="d42" value="2"><label for="d42"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="d4" id="d43" value="3"><label for="d43"> CADA MES</label> <br> <br>
+                            <input type="radio" name="d4" id="d44" value="4"><label for="d44"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="d4" id="d45" value="6"><label for="d45"> A DIARIO O CASI DIARIO</label> <br> <br>
                         </div>
 
                         <!-- QUINTA parte de consumo de drogas -->
@@ -588,32 +748,32 @@
                             <h4>5. En los últimos tres meses, ¿Con qué frecuencia dejaste de hacer lo que se esperaba de ti habitualmente por el consumo de estas drogas?</h4>
                             <!-- pregunta a -->
                             <label for="a5">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                            <input type="radio" name="a5" id="a5" value="0"><label for="a5"> NUNCA</label> <br> <br>
-                            <input type="radio" name="a5" id="a5" value="2"><label for="a5"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="a5" id="a5" value="3"><label for="a5"> CADA MES</label> <br> <br>
-                            <input type="radio" name="a5" id="a5" value="4"><label for="a5"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="a5" id="a5" value="6"><label for="a5"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="a5" id="a51" value=0><label for="a51"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a5" id="a52" value=2><label for="a52"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="a5" id="a53" value=3><label for="a53"> CADA MES</label> <br> <br>
+                            <input type="radio" name="a5" id="a54" value=4><label for="a54"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="a5" id="a55" value=6><label for="a55"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta b -->
                             <label for="b5">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                            <input type="radio" name="b5" id="b5" value="0"><label for="b5"> NUNCA</label> <br> <br>
-                            <input type="radio" name="b5" id="b5" value="2"><label for="b5"> 1 O 2 VECES</label> <br> <br>
-                            <input type="radio" name="b5" id="b5" value="3"><label for="b5"> CADA MES</label> <br> <br>
-                            <input type="radio" name="b5" id="b5" value="4"><label for="b5"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="b5" id="b5" value="6"><label for="b5"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="b5" id="b51" value=0><label for="b51"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b5" id="b52" value=2><label for="b52"> 1 O 2 VECES</label> <br> <br>
+                            <input type="radio" name="b5" id="b53" value=3><label for="b53"> CADA MES</label> <br> <br>
+                            <input type="radio" name="b5" id="b54" value=4><label for="b54"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="b5" id="b55" value=6><label for="b55"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta c -->
                             <label for="c5">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                            <input type="radio" name="c5" id="c5" value="0"><label for="c5"> NUNCA</label> <br> <br>
-                            <input type="radio" name="c5" id="c5" value="2"><label for="c5"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="c5" id="c5" value="3"><label for="c5"> CADA MES</label> <br> <br>
-                            <input type="radio" name="c5" id="c5" value="4"><label for="c5"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="c5" id="c5" value="6"><label for="c5"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="c5" id="c51" value=0><label for="c51"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c5" id="c52" value=2><label for="c52"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="c5" id="c53" value=3><label for="c53"> CADA MES</label> <br> <br>
+                            <input type="radio" name="c5" id="c54" value=4><label for="c54"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="c5" id="c55" value=6><label for="c55"> A DIARIO O CASI DIARIO</label> <br> <br>
                             <!-- pregunta d -->
                             <label for="d5">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                            <input type="radio" name="d5" id="d5" value="0"><label for="d5"> NUNCA</label> <br> <br>
-                            <input type="radio" name="d5" id="d5" value="2"><label for="d5"> 1 O 2 VECES</label> <br><br>
-                            <input type="radio" name="d5" id="d5" value="3"><label for="d5"> CADA MES</label> <br> <br>
-                            <input type="radio" name="d5" id="d5" value="4"><label for="d5"> CADA SEMANA</label> <br> <br>
-                            <input type="radio" name="d5" id="d5" value="6"><label for="d5"> A DIARIO O CASI DIARIO</label> <br> <br>
+                            <input type="radio" name="d5" id="d51" value=0><label for="d51"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d5" id="d52" value=2><label for="d52"> 1 O 2 VECES</label> <br><br>
+                            <input type="radio" name="d5" id="d53" value=3><label for="d53"> CADA MES</label> <br> <br>
+                            <input type="radio" name="d5" id="d54" value=4><label for="d54"> CADA SEMANA</label> <br> <br>
+                            <input type="radio" name="d5" id="d55" value=6><label for="d55"> A DIARIO O CASI DIARIO</label> <br> <br>
                         </div>
 
                         <!-- SEXTA parte de consumo de drogas -->
@@ -621,26 +781,26 @@
                             <h4>6. ¿Un amigo, un familiar o alguien más alguna vez ha mostrado preocupación por tu consumo de estas drogas?</h4>
                             <!-- pregunta a -->
                             <label for="a6">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                            <input type="radio" name="a6" id="a6" value="0"><label for="a6"> NUNCA</label> <br> <br>
-                            <input type="radio" name="a6" id="a6" value="6"><label for="a6"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                            <input type="radio" name="a6" id="a6" value="3"><label for="a6"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <input type="radio" name="a6" id="a61" value=0><label for="a61"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a6" id="a62" value=6><label for="a62"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="a6" id="a63" value=3><label for="a63"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
         
                             <!-- pregunta b -->
                             <label for="b6">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                            <input type="radio" name="b6" id="b6" value="0"><label for="b6"> NUNCA</label> <br> <br>
-                            <input type="radio" name="b6" id="b6" value="6"><label for="b6"> SI, EN LOS ULTIMOS 3 MESES</label> <br> <br>
-                            <input type="radio" name="b6" id="b6" value="3"><label for="b6"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <input type="radio" name="b6" id="b61" value=0><label for="b61"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b6" id="b62" value=6><label for="b62"> SI, EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <input type="radio" name="b6" id="b63" value=3><label for="b63"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
         
                             <!-- pregunta c -->
                             <label for="c6">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                            <input type="radio" name="c6" id="c6" value="0"><label for="c6"> NUNCA</label> <br> <br>
-                            <input type="radio" name="c6" id="c6" value="6"><label for="c6"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                            <input type="radio" name="c6" id="c6" value="3"><label for="c6"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <input type="radio" name="c6" id="c61" value=0><label for="c61"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c6" id="c62" value=6><label for="c62"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="c6" id="c63" value=3><label for="c63"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
                             <!-- pregunta d -->
                             <label for="d6">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                            <input type="radio" name="d6" id="d6" value="0"><label for="d6"> NUNCA</label> <br> <br>
-                            <input type="radio" name="d6" id="d6" value="6"><label for="d6"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                            <input type="radio" name="d6" id="d6" value="3"><label for="d6"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <input type="radio" name="d6" id="d61" value=0><label for="d61"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d6" id="d62" value=6><label for="d62"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="d6" id="d63" value=3><label for="d63"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
                         </div>
 
                         <!-- SEPTIMA parte de consumo de drogas -->
@@ -648,26 +808,26 @@
                             <h4>7. ¿HAS INTENTADO ALGUNA VEZ CONTROLAR, REDUCIR O DEJAR DE CONSUMIR ESTAS DROGAS Y NO LO HAS LOGRADO?</h4>
                             <!-- pregunta a -->
                             <label for="a7">a. Tabaco (cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.)</label> <br> <br>
-                            <input type="radio" name="a7" id="a7" value="0"><label for="a7"> NUNCA</label> <br> <br>
-                            <input type="radio" name="a7" id="a7" value="6"><label for="a7"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                            <input type="radio" name="a7" id="a7" value="3"><label for="a7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <input type="radio" name="a7" id="a71" value=0><label for="a71"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a7" id="a72" value=6><label for="a72"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="a7" id="a73" value=3><label for="a73"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
         
                             <!-- pregunta b -->
                             <label for="b7">b. Bebidas alcohólicas (cerveza, vino, licores, destilados, etc.)</label> <br> <br>
-                            <input type="radio" name="b7" id="b7" value="0"><label for="b7"> NUNCA</label> <br> <br>
-                            <input type="radio" name="b7" id="b7" value="6"><label for="b7"> SI, EN LOS ULTIMOS 3 MESES</label> <br> <br>
-                            <input type="radio" name="b7" id="b7" value="3"><label for="b7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <input type="radio" name="b7" id="b71" value=0><label for="b71"> NUNCA</label> <br> <br>
+                            <input type="radio" name="b7" id="b72" value=6><label for="b72"> SI, EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <input type="radio" name="b7" id="b73" value=3><label for="b73"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
         
                             <!-- pregunta c -->
                             <label for="c7">c. Cannabis (marihuana, costo, hierba, hashish, etc.)</label> <br> <br>
-                            <input type="radio" name="c7" id="c7" value="0"><label for="c7"> NUNCA</label> <br> <br>
-                            <input type="radio" name="c7" id="c7" value="6"><label for="c7"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                            <input type="radio" name="c7" id="c7" value="3"><label for="c7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <input type="radio" name="c7" id="c71" value=0><label for="c71"> NUNCA</label> <br> <br>
+                            <input type="radio" name="c7" id="c72" value=6><label for="c72"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="c7" id="c73" value=3><label for="c73"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
                             <!-- pregunta d -->
                             <label for="d7">d. Otras drogas (cocaína, anfetaminas, inhalantes, tranquilizantes, alucinógenos, opiáceos.)</label> <br> <br>
-                            <input type="radio" name="d7" id="d7" value="0"><label for="d7"> NUNCA</label> <br> <br>
-                            <input type="radio" name="d7" id="d7" value="6"><label for="d7"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                            <input type="radio" name="d7" id="d7" value="3"><label for="d7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                            <input type="radio" name="d7" id="d71" value=0><label for="d71"> NUNCA</label> <br> <br>
+                            <input type="radio" name="d7" id="d72" value=6><label for="d72"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="d7" id="d73" value=3><label for="d73"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
                         </div>
 
                         <!-- OCTAVA parte de consumo de drogas -->
@@ -675,12 +835,17 @@
                             <!-- <h4>. ¿HAS INTENTADO ALGUNA VEZ CONTROLAR, REDUCIR O DEJAR DE CONSUMIR ESTAS DROGAS Y NO LO HAS LOGRADO?</h4> -->
                             <!-- pregunta a -->
                             <h4><label for="a7">8.¿HAS CONSUMIDO ALGUNA VEZ ALGUNA DROGA POR VIA INYECTADA?</label></h4>
-                            <input type="radio" name="a7" id="a7" value="0"><label for="a7"> NUNCA</label> <br> <br>
-                            <input type="radio" name="a7" id="a7" value="2"><label for="a7"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
-                            <input type="radio" name="a7" id="a7" value="1"><label for="a7"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
-                            <div>
-                                <!-- AQUI VAN LOS RESULTADOS QUE DEBEN DE MARCAR DEL EXCEL -->
-                            </div>
+                            <input type="radio" name="a8" id="a8" value=0><label for="a8"> NUNCA</label> <br> <br>
+                            <input type="radio" name="a8" id="a8" value=2><label for="a8"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
+                            <input type="radio" name="a8" id="a8" value=1><label for="a8"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
+                        </div>
+                        <button onclick="calc()" type="button">Calcular riesgo</button>
+                        <div id="resultados1">
+                            <!-- AQUI VAN LOS RESULTADOS QUE DEBEN DE MARCAR DEL EXCEL -->
+                            <h5>Resultados de riesgo por Tabaco:</h5><div id=resTabaco></div>
+                            <h5>Resultados de riesgo por Alcohol:</h5><div id=resAlcohol></div>
+                            <h5>Resultados de riesgo por Cannabis:</h5><div id=resCannabis></div>
+                            <h5>Resultados de riesgo por Otras drogas:</h5> <div id=resOtras></div>
                         </div>
                         <hr>
 
@@ -759,7 +924,6 @@
                 </fieldset>
 
             </article>
-
             <!-- aqui termina CONSUMO DE SUSTANCIAS -->
 
             <!-- AQUI COMIENZA SALUD SEXUAL -->
