@@ -432,7 +432,6 @@
                                     document.getElementById('Pregunta6').style.display="none";
                                     document.getElementById('Pregunta7').style.display="none";
                                     document.getElementById('Pregunta8').style.display="none";
-                                    document.getElementById('H1').value=2;
                                 }else if(y){
                                     document.getElementById('Pregunta2').style.display="block";
                                     document.getElementById('Pregunta3').style.display="none";
@@ -441,7 +440,6 @@
                                     document.getElementById('Pregunta6').style.display="none";
                                     document.getElementById('Pregunta7').style.display="none";
                                     document.getElementById('Pregunta8').style.display="none";
-                                    document.getElementById('H1').value=1;
                                 }else{
                                     document.getElementById('Pregunta2').style.display="block";
                                     document.getElementById('Pregunta3').style.display="block";
@@ -450,7 +448,6 @@
                                     document.getElementById('Pregunta6').style.display="block";
                                     document.getElementById('Pregunta7').style.display="block";
                                     document.getElementById('Pregunta8').style.display="block";
-                                    document.getElementById('H1').value=0;
                                 }
                             }
 
@@ -749,7 +746,6 @@
                         <input type="radio" name="a18" id="a18" value="2"><label for="a18"> SI, EN EL ULTIMO AÑO</label> <br> <br>
 
                         <div>
-                            <input type="hidden" name="h1" id="H1" value=0>
                             <button>Enviar</button>
                         </div>
                         <div>
