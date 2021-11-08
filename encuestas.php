@@ -432,6 +432,7 @@
                                     document.getElementById('Pregunta6').style.display="none";
                                     document.getElementById('Pregunta7').style.display="none";
                                     document.getElementById('Pregunta8').style.display="none";
+                                    document.getElementById('H1').value=2;
                                 }else if(y){
                                     document.getElementById('Pregunta2').style.display="block";
                                     document.getElementById('Pregunta3').style.display="none";
@@ -440,6 +441,7 @@
                                     document.getElementById('Pregunta6').style.display="none";
                                     document.getElementById('Pregunta7').style.display="none";
                                     document.getElementById('Pregunta8').style.display="none";
+                                    document.getElementById('H1').value=1;
                                 }else{
                                     document.getElementById('Pregunta2').style.display="block";
                                     document.getElementById('Pregunta3').style.display="block";
@@ -448,173 +450,13 @@
                                     document.getElementById('Pregunta6').style.display="block";
                                     document.getElementById('Pregunta7').style.display="block";
                                     document.getElementById('Pregunta8').style.display="block";
+                                    document.getElementById('H1').value=0;
                                 }
                             }
 
-                            //Funcion calc calcula el riesgo de la primera parte de consumo de sustancias    DANIEL
-                            function calc(){
-                                //se crean variables para sumar los puntos de las respuestas    DANIEL
-                                var totalTabaco=0;
-                                var totalAlcohol=0;
-                                var totalCannabis=0;
-                                var totalOtras=0;
-                                //Se comprueba que radio esta seleccionado y se suma a su respectiva variable    DANIEL
-                                //se calcula el puntaje de tabaco    DANIEL
-                                if(document.getElementById('a11').checked)totalTabaco+=Number(document.getElementById('a11').value);
-                                if(document.getElementById('a12').checked)totalTabaco+=Number(document.getElementById('a12').value);
-                                if(document.getElementById('a21').checked)totalTabaco+=Number(document.getElementById('a21').value);
-                                if(document.getElementById('a22').checked)totalTabaco+=Number(document.getElementById('a22').value);
-                                if(document.getElementById('a23').checked)totalTabaco+=Number(document.getElementById('a23').value);
-                                if(document.getElementById('a24').checked)totalTabaco+=Number(document.getElementById('a24').value);
-                                if(document.getElementById('a25').checked)totalTabaco+=Number(document.getElementById('a25').value);
-                                if(document.getElementById('a31').checked)totalTabaco+=Number(document.getElementById('a31').value);
-                                if(document.getElementById('a32').checked)totalTabaco+=Number(document.getElementById('a32').value);
-                                if(document.getElementById('a33').checked)totalTabaco+=Number(document.getElementById('a33').value);
-                                if(document.getElementById('a34').checked)totalTabaco+=Number(document.getElementById('a34').value);
-                                if(document.getElementById('a35').checked)totalTabaco+=Number(document.getElementById('a35').value);
-                                if(document.getElementById('a41').checked)totalTabaco+=Number(document.getElementById('a41').value);
-                                if(document.getElementById('a42').checked)totalTabaco+=Number(document.getElementById('a42').value);
-                                if(document.getElementById('a43').checked)totalTabaco+=Number(document.getElementById('a43').value);
-                                if(document.getElementById('a44').checked)totalTabaco+=Number(document.getElementById('a44').value);
-                                if(document.getElementById('a45').checked)totalTabaco+=Number(document.getElementById('a45').value);
-                                if(document.getElementById('a51').checked)totalTabaco+=Number(document.getElementById('a51').value);
-                                if(document.getElementById('a52').checked)totalTabaco+=Number(document.getElementById('a52').value);
-                                if(document.getElementById('a53').checked)totalTabaco+=Number(document.getElementById('a53').value);
-                                if(document.getElementById('a54').checked)totalTabaco+=Number(document.getElementById('a54').value);
-                                if(document.getElementById('a55').checked)totalTabaco+=Number(document.getElementById('a55').value);
-                                if(document.getElementById('a61').checked)totalTabaco+=Number(document.getElementById('a61').value);
-                                if(document.getElementById('a62').checked)totalTabaco+=Number(document.getElementById('a62').value);
-                                if(document.getElementById('a63').checked)totalTabaco+=Number(document.getElementById('a63').value);
-                                if(document.getElementById('a71').checked)totalTabaco+=Number(document.getElementById('a71').value);
-                                if(document.getElementById('a72').checked)totalTabaco+=Number(document.getElementById('a72').value);
-                                if(document.getElementById('a73').checked)totalTabaco+=Number(document.getElementById('a73').value);
-                                
-                                //se calcula el puntaje de alcohol     DANIEL
-                                if(document.getElementById('b11').checked)totalAlcohol+=Number(document.getElementById('b11').value);
-                                if(document.getElementById('b12').checked)totalAlcohol+=Number(document.getElementById('b12').value);
-                                if(document.getElementById('b21').checked)totalAlcohol+=Number(document.getElementById('b21').value);
-                                if(document.getElementById('b22').checked)totalAlcohol+=Number(document.getElementById('b22').value);
-                                if(document.getElementById('b23').checked)totalAlcohol+=Number(document.getElementById('b23').value);
-                                if(document.getElementById('b24').checked)totalAlcohol+=Number(document.getElementById('b24').value);
-                                if(document.getElementById('b25').checked)totalAlcohol+=Number(document.getElementById('b25').value);
-                                if(document.getElementById('b31').checked)totalAlcohol+=Number(document.getElementById('b31').value);
-                                if(document.getElementById('b32').checked)totalAlcohol+=Number(document.getElementById('b32').value);
-                                if(document.getElementById('b33').checked)totalAlcohol+=Number(document.getElementById('b33').value);
-                                if(document.getElementById('b34').checked)totalAlcohol+=Number(document.getElementById('b34').value);
-                                if(document.getElementById('b35').checked)totalAlcohol+=Number(document.getElementById('b35').value);
-                                if(document.getElementById('b41').checked)totalAlcohol+=Number(document.getElementById('b41').value);
-                                if(document.getElementById('b42').checked)totalAlcohol+=Number(document.getElementById('b42').value);
-                                if(document.getElementById('b43').checked)totalAlcohol+=Number(document.getElementById('b43').value);
-                                if(document.getElementById('b44').checked)totalAlcohol+=Number(document.getElementById('b44').value);
-                                if(document.getElementById('b45').checked)totalAlcohol+=Number(document.getElementById('b45').value);
-                                if(document.getElementById('b51').checked)totalAlcohol+=Number(document.getElementById('b51').value);
-                                if(document.getElementById('b52').checked)totalAlcohol+=Number(document.getElementById('b52').value);
-                                if(document.getElementById('b53').checked)totalAlcohol+=Number(document.getElementById('b53').value);
-                                if(document.getElementById('b54').checked)totalAlcohol+=Number(document.getElementById('b54').value);
-                                if(document.getElementById('b55').checked)totalAlcohol+=Number(document.getElementById('b55').value);
-                                if(document.getElementById('b61').checked)totalAlcohol+=Number(document.getElementById('b61').value);
-                                if(document.getElementById('b62').checked)totalAlcohol+=Number(document.getElementById('b62').value);
-                                if(document.getElementById('b63').checked)totalAlcohol+=Number(document.getElementById('b63').value);
-                                if(document.getElementById('b71').checked)totalAlcohol+=Number(document.getElementById('b71').value);
-                                if(document.getElementById('b72').checked)totalAlcohol+=Number(document.getElementById('b72').value);
-                                if(document.getElementById('b73').checked)totalAlcohol+=Number(document.getElementById('b73').value);
-
-                                //se calcula el puntaje de cannabis    DANIEL
-                                if(document.getElementById('c11').checked)totalCannabis+=Number(document.getElementById('c11').value);
-                                if(document.getElementById('c12').checked)totalCannabis+=Number(document.getElementById('c12').value);
-                                if(document.getElementById('c21').checked)totalCannabis+=Number(document.getElementById('c21').value);
-                                if(document.getElementById('c22').checked)totalCannabis+=Number(document.getElementById('c22').value);
-                                if(document.getElementById('c23').checked)totalCannabis+=Number(document.getElementById('c23').value);
-                                if(document.getElementById('c24').checked)totalCannabis+=Number(document.getElementById('c24').value);
-                                if(document.getElementById('c25').checked)totalCannabis+=Number(document.getElementById('c25').value);
-                                if(document.getElementById('c31').checked)totalCannabis+=Number(document.getElementById('c31').value);
-                                if(document.getElementById('c32').checked)totalCannabis+=Number(document.getElementById('c32').value);
-                                if(document.getElementById('c33').checked)totalCannabis+=Number(document.getElementById('c33').value);
-                                if(document.getElementById('c34').checked)totalCannabis+=Number(document.getElementById('c34').value);
-                                if(document.getElementById('c35').checked)totalCannabis+=Number(document.getElementById('c35').value);
-                                if(document.getElementById('c41').checked)totalCannabis+=Number(document.getElementById('c41').value);
-                                if(document.getElementById('c42').checked)totalCannabis+=Number(document.getElementById('c42').value);
-                                if(document.getElementById('c43').checked)totalCannabis+=Number(document.getElementById('c43').value);
-                                if(document.getElementById('c44').checked)totalCannabis+=Number(document.getElementById('c44').value);
-                                if(document.getElementById('c45').checked)totalCannabis+=Number(document.getElementById('c45').value);
-                                if(document.getElementById('c51').checked)totalCannabis+=Number(document.getElementById('c51').value);
-                                if(document.getElementById('c52').checked)totalCannabis+=Number(document.getElementById('c52').value);
-                                if(document.getElementById('c53').checked)totalCannabis+=Number(document.getElementById('c53').value);
-                                if(document.getElementById('c54').checked)totalCannabis+=Number(document.getElementById('c54').value);
-                                if(document.getElementById('c55').checked)totalCannabis+=Number(document.getElementById('c55').value);
-                                if(document.getElementById('c61').checked)totalCannabis+=Number(document.getElementById('c61').value);
-                                if(document.getElementById('c62').checked)totalCannabis+=Number(document.getElementById('c62').value);
-                                if(document.getElementById('c63').checked)totalCannabis+=Number(document.getElementById('c63').value);
-                                if(document.getElementById('c71').checked)totalCannabis+=Number(document.getElementById('c71').value);
-                                if(document.getElementById('c72').checked)totalCannabis+=Number(document.getElementById('c72').value);
-                                if(document.getElementById('c73').checked)totalCannabis+=Number(document.getElementById('c73').value);
-
-                                //se calcula el punteje de otras drogas     DANIEL
-                                if(document.getElementById('d11').checked)totalOtras+=Number(document.getElementById('d11').value);
-                                if(document.getElementById('d12').checked)totalOtras+=Number(document.getElementById('d12').value);
-                                if(document.getElementById('d21').checked)totalOtras+=Number(document.getElementById('d21').value);
-                                if(document.getElementById('d22').checked)totalOtras+=Number(document.getElementById('d22').value);
-                                if(document.getElementById('d23').checked)totalOtras+=Number(document.getElementById('d23').value);
-                                if(document.getElementById('d24').checked)totalOtras+=Number(document.getElementById('d24').value);
-                                if(document.getElementById('d25').checked)totalOtras+=Number(document.getElementById('d25').value);
-                                if(document.getElementById('d31').checked)totalOtras+=Number(document.getElementById('d31').value);
-                                if(document.getElementById('d32').checked)totalOtras+=Number(document.getElementById('d32').value);
-                                if(document.getElementById('d33').checked)totalOtras+=Number(document.getElementById('d33').value);
-                                if(document.getElementById('d34').checked)totalOtras+=Number(document.getElementById('d34').value);
-                                if(document.getElementById('d35').checked)totalOtras+=Number(document.getElementById('d35').value);
-                                if(document.getElementById('d41').checked)totalOtras+=Number(document.getElementById('d41').value);
-                                if(document.getElementById('d42').checked)totalOtras+=Number(document.getElementById('d42').value);
-                                if(document.getElementById('d43').checked)totalOtras+=Number(document.getElementById('d43').value);
-                                if(document.getElementById('d44').checked)totalOtras+=Number(document.getElementById('d44').value);
-                                if(document.getElementById('d45').checked)totalOtras+=Number(document.getElementById('d45').value);
-                                if(document.getElementById('d51').checked)totalOtras+=Number(document.getElementById('d51').value);
-                                if(document.getElementById('d52').checked)totalOtras+=Number(document.getElementById('d52').value);
-                                if(document.getElementById('d53').checked)totalOtras+=Number(document.getElementById('d53').value);
-                                if(document.getElementById('d54').checked)totalOtras+=Number(document.getElementById('d54').value);
-                                if(document.getElementById('d55').checked)totalOtras+=Number(document.getElementById('d55').value);
-                                if(document.getElementById('d61').checked)totalOtras+=Number(document.getElementById('d61').value);
-                                if(document.getElementById('d62').checked)totalOtras+=Number(document.getElementById('d62').value);
-                                if(document.getElementById('d63').checked)totalOtras+=Number(document.getElementById('d63').value);
-                                if(document.getElementById('d71').checked)totalOtras+=Number(document.getElementById('d71').value);
-                                if(document.getElementById('d72').checked)totalOtras+=Number(document.getElementById('d72').value);
-                                if(document.getElementById('d73').checked)totalOtras+=Number(document.getElementById('d73').value);
-
-                                //Se decide si necesita algun tratamiento o no y si debe ser intensivo o breve.    DANIEL
-                                //se muestran los resultados de tabaco    DANIEL
-                                if(totalTabaco>26){
-                                    document.getElementById('resTabaco').innerHTML='Usted está  en riesgo. Requiere de un tratamiento Intensivo';
-                                }else if(totalTabaco>3){
-                                    document.getElementById('resTabaco').innerHTML='Su riesgo es moderado. Requiere de un tratamiento breve';
-                                }else{
-                                    document.getElementById('resTabaco').innerHTML='Su riesgo es mínimo. No requiere de ningún  tipo de tratamiento';
-                                }
-
-                                //se muestran los resultados de alcohol    DANIEL
-                                if(totalAlcohol>26){
-                                    document.getElementById('resAlcohol').innerHTML='Usted está  en riesgo. Requiere de un tratamiento Intensivo';
-                                }else if(totalAlcohol>10){
-                                    document.getElementById('resAlcohol').innerHTML='Su riesgo es moderado. Requiere de un tratamiento breve';
-                                }else{
-                                    document.getElementById('resAlcohol').innerHTML='Su riesgo es mínimo. No requiere de ningún  tipo de tratamiento';
-                                }
-
-                                //se muestran los resultados de cannabis    DANIEL
-                                if(totalCannabis>26){
-                                    document.getElementById('resCannabis').innerHTML='Usted está  en riesgo. Requiere de un tratamiento Intensivo';
-                                }else if(totalCannabis>4){
-                                    document.getElementById('resCannabis').innerHTML='Su riesgo es moderado. Requiere de un tratamiento breve';
-                                }else{
-                                    document.getElementById('resCannabis').innerHTML='Su riesgo es mínimo. No requiere de ningún  tipo de tratamiento';
-                                }
-
-                                //se muestran los resultados de otras drgas    DANIEL
-                                if(totalOtras>26){
-                                    document.getElementById('resOtras').innerHTML='Usted está  en riesgo. Requiere de un tratamiento Intensivo';
-                                }else{
-                                    document.getElementById('resOtras').innerHTML='Su riesgo es moderado. Requiere de un tratamiento breve';
-                                }
-                            }
                         </script>
+                        
+
                         <!-- primera parte del formulario -->
                         <div id="Pregunta1">
                             <h3>CONSUMO DE DROGAS</h3>
@@ -839,14 +681,6 @@
                             <input type="radio" name="a8" id="a8" value=2><label for="a8"> SI, EN LOS ULTIMOS 3 MESES</label> <br><br>
                             <input type="radio" name="a8" id="a8" value=1><label for="a8"> SI, PERO NO EN LOS ULTIMOS 3 MESES</label> <br> <br>
                         </div>
-                        <button onclick="calc()" type="button">Calcular riesgo</button>
-                        <div id="resultados1">
-                            <!-- AQUI VAN LOS RESULTADOS QUE DEBEN DE MARCAR DEL EXCEL -->
-                            <h5>Resultados de riesgo por Tabaco:</h5><div id=resTabaco></div>
-                            <h5>Resultados de riesgo por Alcohol:</h5><div id=resAlcohol></div>
-                            <h5>Resultados de riesgo por Cannabis:</h5><div id=resCannabis></div>
-                            <h5>Resultados de riesgo por Otras drogas:</h5> <div id=resOtras></div>
-                        </div>
                         <hr>
 
                         <!-- segunda parte del formulario CONSUMO DE ALCOHOL -->
@@ -913,6 +747,11 @@
                         <input type="radio" name="a18" id="a18" value="0"><label for="a18"> NUNCA</label> <br> <br>
                         <input type="radio" name="a18" id="a18" value="1"><label for="a18"> SI, PERO NO EN EL CURSO DEL ULTIMO AÑO</label> <br><br>
                         <input type="radio" name="a18" id="a18" value="2"><label for="a18"> SI, EN EL ULTIMO AÑO</label> <br> <br>
+
+                        <div>
+                            <input type="hidden" name="h1" id="H1" value=0>
+                            <button>Enviar</button>
+                        </div>
                         <div>
                             <!-- AQUI VA LA PUNTUACIÓN DE ESTA PARTE DE ALCOHOL -->
                         </div>
