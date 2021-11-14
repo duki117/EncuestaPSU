@@ -1,14 +1,5 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h3><?php
+        <?php
+        //--------------------------------------------PHP DE CONSUMO DE SUSTANCIAS--------------------------------------------
         //Definicion de variables para el uso de funciones
         $a1=$a2=$a3=$a4=$a5=$a6=$a7=$a8=$a9=$a10=$a11=$a12=$a13=$a14=$a15=$a16=$a17=$a18=$b1=$b2=$b3=$b4=$b5=$b6=$b7=$c1=$c2=$c3=$c4=$c5=$c6=$c7=$d1=$d2=$d3=$d4=$d5=$d6=$d7=$H1=0;
         $tabaco=$alcohol=$cannabis=$otras=$alcohol2=0;
@@ -68,50 +59,7 @@
                 }
             }
         }
-        function PrintData(){
-            //Funcion meramente de desarrollo: Se usa para verificar que los datos sean correctos.
-            //PENDIENTE A ELEIMINAR.
-            global $a1,$a2,$a3,$a4,$a5,$a6,$a7,$a8,$a9,$a10,$a11,$a12,$a13,$a14,$a15,$a16,$a17,$a18,$b1,$b2,$b3,$b4,$b5,$b6,$b7,$c1,$c2,$c3,$c4,$c5,$c6,$c7,$d1,$d2,$d3,$d4,$d5,$d6,$d7,$H1;
-            echo "$a1 <br>";
-            echo "$b1 <br>";
-            echo "$c1 <br>";
-            echo "$d1 <br><br>";
-            echo "$a2 <br>";
-            echo "$b2 <br>";
-            echo "$c2 <br>";
-            echo "$d2 <br><br>";
-            echo "$a3 <br>";
-            echo "$b3 <br>";
-            echo "$c3 <br>";
-            echo "$d3 <br><br>";
-            echo "$a4 <br>";
-            echo "$b4 <br>";
-            echo "$c4 <br>";
-            echo "$d4 <br><br>";
-            echo "$a5 <br>";
-            echo "$b5 <br>";
-            echo "$c5 <br>";
-            echo "$d5 <br><br>";
-            echo "$a6 <br>";
-            echo "$b6 <br>";
-            echo "$c6 <br>";
-            echo "$d6 <br><br>";
-            echo "$a7 <br>";
-            echo "$b7 <br>";
-            echo "$c7 <br>";
-            echo "$d7 <br><br>";
-            echo "$a8 <br>";
-            echo "$a9 <br>";
-            echo "$a10 <br>";
-            echo "$a11 <br>";
-            echo "$a12 <br>";
-            echo "$a13 <br>";
-            echo "$a14 <br>";
-            echo "$a15 <br>";
-            echo "$a16 <br>";
-            echo "$a17 <br>";
-            echo "$a18 <br>";
-        }
+
         function CalcRiesgo(){
             global $tabaco,$alcohol,$cannabis,$otras,$alcohol2,$a1,$a2,$a3,$a4,$a5,$a6,$a7,$a8,$a9,$a10,$a11,$a12,$a13,$a14,$a15,$a16,$a17,$a18,$b1,$b2,$b3,$b4,$b5,$b6,$b7,$c1,$c2,$c3,$c4,$c5,$c6,$c7,$d1,$d2,$d3,$d4,$d5,$d6,$d7,$H1;
             //Funcion desiganada a calcualar los puntajes de las preguntas.
@@ -121,6 +69,7 @@
             $otras = $d1+$d2+$d3+$d4+$d5+$d6+$d7+$a8;
             $alcohol2 = $a9+$a10+$a11+$a12+$a13+$a14+$a15+$a16+$a17+$a18;
         }
+        
         function PrintResult(){
             //Funcion designada a imprimir los mensajes relacionados con el puntaje de cada riesgo.
             global $tabaco,$alcohol,$cannabis,$otras,$alcohol2;
@@ -196,12 +145,75 @@
                 echo "<br>";
             }
         }    
-
         //Llamada de funciones.
         Cargar();
         CalcRiesgo();
         PrintResult();
-    ?></h3>
-    
-</body>
-</html>
+        //--------------------------------------------PHP DE CONSUMO DE SUSTANCIAS--------------------------------------------
+?>
+
+
+
+<?php
+//--------------------------------------------PHP DE CONSUMO DE PSICOSOCIAL--------------------------------------------
+        //Variables de funciones
+        /*$a1=$a2=$a3=$a4=$a5=$a6=$a7=$a8=$a9=$a10=$a11=$a12=$a13=$a14=$a15=$a16=$a17=$a18=
+        $b1=$b2=$b3=$b4=$b5=$b6=$b7=
+        $c1=$c2=$c3=$c4=$c5=$c6=$c7=
+        $d1=$d2=$d3=$d4=$d5=$d6=$d7=$H1=0;
+        $tabaco=$alcohol=$cannabis=$otras=$alcohol2=0;*/
+
+        $cansancio=$nervioso=$nocalma=$desesperado=$inquieto=$impaciente=$deprimido=$esfuerzo=$animarte=$inutil=0;
+        $MalestarPsic=0;    
+        
+        function Validar(){
+        //se definen las variables para las funciones globales
+        /*global $a1,$a2,$a3,$a4,$a5,$a6,$a7,$a8,$a9,$a10,$a11,$a11,$a12,$a13,$a14,$a15,$a16,$a17,$a18,
+        $b1,$b2,$b3,$b4,$b5,$b6,$b7,
+        $c1,$c2,$c3,$c4,$c5,$c6,$c7,
+        $d1,$d2,$d3,$d4,$d5,$d6,$d7,$H1,*/
+
+        global $cansancio,$nervioso,$nocalma,$desesperado,$inquieto,$impaciente,$deprimido,$esfuerzo,$animarte,$inutil;
+
+            //DAVID: Faltan las asignaciones de los datos (Psicosicial)
+
+
+        }
+
+        //DAVID: Calcular puntajes
+        function Puntaje(){
+            global $cansancio,$nervioso,$nocalma,$desesperado,$inquieto,$impaciente,$deprimido,$esfuerzo,$animarte,$inutil;
+            
+            $MalestarPsic= $cansancio+$nervioso+$nocalma+$desesperado+$inquieto+$impaciente+$deprimido+$esfuerzo+$animarte+$inutil;
+        }
+
+        //DAVID: Imprime calculos
+        function Imprimir(){
+            global $$MalestarPsic;
+            echo "Puntaje de riesgo en tabaco: $MalestarPsi";
+            echo "<br>";
+            if($MalestarPsi>29){
+                echo "Riesgo muy alto de padecer un trastorno depresivo y/o ansioso se requiere valoración clínica";
+                echo "<br>";
+            }else if($MalestarPsi>21){
+                echo "Riesgo alto de padecer un trastorno depresivo y/o ansioso. ";
+                echo "<br>";
+            }else if($MalestarPsi>15){
+                echo "Riesgo moderado de padecer un trastorno depresivo y/o ansioso, se puede encontrar bajo situaciones estresantes que generen ciertos síntomas de ansiedad y/o ";
+                echo "<br>";
+            }else{
+                echo "Riesgo bajo de padecer un trastorno depresivo y/o ansioso, no presenta un riesgo real de padecer un trastorno de ansiedad y/o depresión";
+            }
+            echo "<hr>";
+
+            //DAVID: Aquí va la calificación a sacar//
+
+
+        }
+        
+        Validar();
+        Puntaje();
+        Imprimir();
+
+
+?>

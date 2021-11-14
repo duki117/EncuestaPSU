@@ -5,25 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
-    <title>PES</title>
+    <title>PSU</title>
 </head>
-<!--Funcion Chek1() es llamada al terminar de cargar la pagina para corroborar que las preguntas disponibles sean acordes a las respuestas seleccionadas  DANIEL-->
-<body onload="chek1()">
+<body>
     <!-- HEADER "TITULO" -->
-    <div class="header">
-        <h1 id="titulo-pes">P.E.S.</h1>
-    </div>
-    <!-- MENU DE NAVEGACIÓN -->
-    <div class="navbar">
-        <a href="#saludfisica">SALUD FÍSICA</a>
-        <a href="#saludpsico">SALUD PSICOSOCIAL</a>
-        <a href="#consumsust">CONSUMO DE SUSTANCIAS</a>
-        <a href="#saludsex">SALUD SEXUAL</a>
-      </div>
+    <header>
+        <div class="header">
+            <a href="#"><img src="./img/us.png" alt="" width="150px"></a>
+            <a href="#"><h1 id="titulo-pes">Perfil de Salud Universitario</h1></a>
+            <a href="#"><img src="./img/descarga.png" alt="" width="150px"></a>
+        </div>
+        <!-- MENU DE NAVEGACIÓN -->
+        <div class="navbar">
+            <a href="#inicio">INICIO</a>
+            <a href="#saludfisica">SALUD FÍSICA</a>
+            <a href="#saludpsico">SALUD PSICOSOCIAL</a>
+            <a href="#consumsust">CONSUMO DE SUSTANCIAS</a>
+            <a href="#saludsex">SALUD SEXUAL</a>
+        </div>
+    </header>
     <div class="contenedor">
-        <!-- MENU DE NAVEGACION -->
-
         <section class="encuestas">
+            <!-- aqui va el INICIO -->
+            <article class="inicio" id="inicio">
+                <div>
+                    <fieldset>
+                        <h1>INICIO</h1>
+                        <p style="text-align: center;">Bienvenido: <button class="aviso-priv"> <a id="linkon" href="./avisopriv.html" target="blank_">Ver Aviso de Privacidad</a></button> </p>
+                        <h2>¿Qué es P.S.U.?</h2>
+                        <p>Es un Instrumento de evaluación de salud desarollado por el programa Universidad Saludable de nuestra Universidad. Se compone de una evaluación electrónica en línea y una toma de medidas.</p>
+                        <div class="container-inicio">
+                            <div class="columna1">
+                                <p id="creditos"><b>Instrucciones para usuarios en computadora</b></p>
+                                <div class="columna1-content">                  
+                                    <ul class="columna1-texto">
+                                        <li>Desplazarse hacia abajo respondiendo cada seciión</li>
+                                        <li>Para desplazarse entre secciones puede hacer uso de la barra de navegación dando click en la categoría deseada</li>
+                                        <li>IMPORTANTE: Es necesario al acabar de responder la sección dar click en el botón GUARDAR de lo contrario no quedarán guardados sus datos</li>
+                                    </ul>  
+                                </div>
+                            </div>
+                            <div class="columna2">                
+                                <p id="recursos" class="margin-columna-inicio">Instrucciones para usuarios en móviles</p>                                  
+                                <p class="infouaa-columna2"></p>
+                                <ul class="infouaa-columna2">
+                                    <li>De preferencia usar el celular de manera horizontal si le es más cómodo</li>
+                                    <li>Desplazarse entre secciones haciendo uso del menú o desplazandose hacia abajo</li>
+                                    <li>En caso de no ver todas las respuestas debe desplazarse a la derecha</li>
+                                    <li>Una vez terminada una sección guardarla</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div> 
+            </article>
             <!-- aqui empieza salud física -->
             <article class="saludfisica" id="saludfisica">
                 <fieldset>
@@ -167,95 +202,120 @@
                 </fieldset>
             </article> <br>
 
-            <!-- aqui empieza salud psicosocial -->
+<!------------------------------------------------SALUD PSICOSOCIAL------------------------------------------------------------>
+<!------------------------------------------------SALUD PSICOSOCIAL------------------------------------------------------------>
+<!------------------------------------------------SALUD PSICOSOCIAL------------------------------------------------------------>
 
             <article class="saludpsico" id="saludpsico">
                 <fieldset>
                     <legend>SALUD PSICOSOCIAL</legend>
                     <form action="#">
-                        <!-- primera parte del formulario -->
+
+        <!------------------------------------PRIMERA PARTE del formulario-------------------------------------------------------------->
                         <h3>MALESTAR PSICOLÓGICO</h3>
                         <p id="legenda">Responde a cada pregunta según se aplique a tu condición actual</p>
                         <p>Instrucciones: selecciona una casilla con la te identifiques de 1 al 5 en donde 1 es NUNCA y 5 es SIEMPRE</p>
+
                         <!-- pregunta 1 -->
-                        <label for="01-cansancio">1. ¿Con qué frecuencia te has sentido cansado (a), sin alguna buena razón?</label> <br> <br>
-                        <input type="radio" name="01-cansancio" id="01-cansancio" value="1" checked><label for="01-cansancio">1 - NUNCA</label> <br>
-                        <input type="radio" name="01-cansancio" id="01-cansancio" value="2"><label for="01-cansancio">2 - POCAS VECES</label> <br>
-                        <input type="radio" name="01-cansancio" id="01-cansancio" value="3"><label for="01-cansancio">3 - A VECES</label> <br>
-                        <input type="radio" name="01-cansancio" id="01-cansancio" value="4"><label for="01-cansancio">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="01-cansancio" id="01-cansancio" value="5"><label for="01-cansancio">5 - SIEMPRE</label> <br> <br>
+                           <!-- DAVID: "01-cansancio" cambiado a "cansancio" por un error de sintaxis en backend-->
+                        <label for="cansancio">1. ¿Con qué frecuencia te has sentido cansado (a), sin alguna buena razón?</label> <br> <br>
+                        <input type="radio" name="cansancio" id="cansancio" value="1" checked><label for="cansancio">1 - NUNCA</label> <br>
+                        <input type="radio" name="cansancio" id="cansancio" value="2"><label for="cansancio">2 - POCAS VECES</label> <br>
+                        <input type="radio" name="cansancio" id="cansancio" value="3"><label for="cansancio">3 - A VECES</label> <br>
+                        <input type="radio" name="cansancio" id="cansancio" value="4"><label for="cansancio">4 - MUCHAS VECES</label> <br>
+                        <input type="radio" name="cansancio" id="cansancio" value="5"><label for="cansancio">5 - SIEMPRE</label> <br> <br>
+
                         <!-- pregunta 2 -->
-                        <label for="02-nervioso">2. ¿Con qué frecuencia te has sentido nervioso (a)?</label> <br> <br>
-                        <input type="radio" name="02-nervioso" id="02-nervioso" value="1" checked><label for="02-nervioso">1 - NUNCA</label> <br>
-                        <input type="radio" name="02-nervioso" id="02-nervioso" value="2"><label for="02-nervioso">2 - POCAS VECES</label> <br>
-                        <input type="radio" name="02-nervioso" id="02-nervioso" value="3"><label for="02-nervioso">3 - A VECES</label> <br>
-                        <input type="radio" name="02-nervioso" id="02-nervioso" value="4"><label for="02-nervioso">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="02-nervioso" id="02-nervioso" value="5"><label for="02-nervioso">5 - SIEMPRE</label> <br> <br>
+                          <!-- DAVID: "02-nervioso" cambiado a "nervioso" por un error de sintaxis en backend-->
+                        <label for="nervioso">2. ¿Con qué frecuencia te has sentido nervioso (a)?</label> <br> <br>
+                        <input type="radio" name="nervioso" id="nervioso" value="1" checked><label for="nervios">1 - NUNCA</label> <br>
+                        <input type="radio" name="nervioso" id="nervioso" value="2"><label for="nervioso">2 - POCAS VECES</label> <br>
+                        <input type="radio" name="nervioso" id="nervioso" value="3"><label for="nervioso">3 - A VECES</label> <br>
+                        <input type="radio" name="nervioso" id="nervioso" value="4"><label for="nervioso">4 - MUCHAS VECES</label> <br>
+                        <input type="radio" name="nervioso" id="nervioso" value="5"><label for="nervioso">5 - SIEMPRE</label> <br> <br>
+
                         <!-- pregunta 3 -->
-                        <label for="03-nocalma">3. ¿Con qué frecuencia te has sentido tan nervioso (a) que nada te podía calmar?</label> <br> <br>
-                        <input type="radio" name="03-nocalma" id="03-nocalma" value="1" checked><label for="03-nocalma">1 - NUNCA</label> <br>
-                        <input type="radio" name="03-nocalma" id="03-nocalma" value="2" ><label for="03-nocalma">2 - POCAS VECES</label> <br>
-                        <input type="radio" name="03-nocalma" id="03-nocalma" value="3"><label for="03-nocalma">3 - A VECES</label> <br>
-                        <input type="radio" name="03-nocalma" id="03-nocalma" value="4"><label for="03-nocalma">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="03-nocalma" id="03-nocalma" value="5"><label for="03-nocalma">5 - SIEMPRE</label> <br> <br>
+                          <!-- DAVID: "03-nocalma" cambiado a "nocalma" por un error de sintaxis en backend-->
+                        <label for="nocalma">3. ¿Con qué frecuencia te has sentido tan nervioso (a) que nada te podía calmar?</label> <br> <br>
+                        <input type="radio" name="nocalma" id="nocalma" value="1" checked><label for="nocalma">1 - NUNCA</label> <br>
+                        <input type="radio" name="nocalma" id="nocalma" value="2" ><label for="nocalma">2 - POCAS VECES</label> <br>
+                        <input type="radio" name="nocalma" id="nocalma" value="3"><label for="nocalma">3 - A VECES</label> <br>
+                        <input type="radio" name="nocalma" id="nocalma" value="4"><label for="nocalma">4 - MUCHAS VECES</label> <br>
+                        <input type="radio" name="nocalma" id="nocalma" value="5"><label for="nocalma">5 - SIEMPRE</label> <br> <br>
+
                         <!-- pregunta 4 -->
-                        <label for="04-desesperado">4. ¿Con qué frecuencia te has sentido desesperado (a)?</label> <br> <br>
-                        <input type="radio" name="04-desesperado" id="04-desesperado" value="1" checked><label for="04-desesperado">1 - NUNCA</label> <br>
-                        <input type="radio" name="04-desesperado" id="04-desesperado" value="2"><label for="04-desesperado">2 - POCAS VECES</label> <br>
-                        <input type="radio" name="04-desesperado" id="04-desesperado" value="3"><label for="04-desesperado">3 - A VECES</label> <br>
-                        <input type="radio" name="04-desesperado" id="04-desesperado" value="4"><label for="04-desesperado">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="04-desesperado" id="04-desesperado" value="5"><label for="04-desesperado">5 - SIEMPRE</label> <br> <br>
+                          <!-- DAVID: "04-desesperado" cambiado a "desesperado" por un error de sintaxis en backend-->
+                        <label for="desesperado">4. ¿Con qué frecuencia te has sentido desesperado (a)?</label> <br> <br>
+                        <input type="radio" name="desesperado" id="desesperado" value="1" checked><label for="desesperado">1 - NUNCA</label> <br>
+                        <input type="radio" name="desesperado" id="desesperado" value="2"><label for="desesperado">2 - POCAS VECES</label> <br>
+                        <input type="radio" name="desesperado" id="desesperado" value="3"><label for="desesperado">3 - A VECES</label> <br>
+                        <input type="radio" name="desesperado" id="desesperado" value="4"><label for="desesperado">4 - MUCHAS VECES</label> <br>
+                        <input type="radio" name="desesperado" id="desesperado" value="5"><label for="desesperado">5 - SIEMPRE</label> <br> <br>
+                       
                         <!-- pregunta 5 -->
-                        <label for="05-inquieto">5. ¿Con qué frecuencia te has sentido inquieto (a) o intranquilo (a)?</label> <br> <br>
-                        <input type="radio" name="05-inquieto" id="05-inquieto" value="1" checked><label for="05-inquieto">1 - NUNCA</label> <br>
-                        <input type="radio" name="05-inquieto" id="05-inquieto" value="2"><label for="05-inquieto">2 - POCAS VECES</label> <br>
-                        <input type="radio" name="05-inquieto" id="05-inquieto" value="3"><label for="05-inquieto">3 - A VECES</label> <br>
-                        <input type="radio" name="05-inquieto" id="05-inquieto" value="4"><label for="05-inquieto">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="05-inquieto" id="05-inquieto" value="5"><label for="05-inquieto">5 - SIEMPRE</label> <br> <br>
+                          <!-- DAVID: "05-inquieto" cambiado a "inquieto" por un error de sintaxis en backend-->
+                        <label for="inquieto">5. ¿Con qué frecuencia te has sentido inquieto (a) o intranquilo (a)?</label> <br> <br>
+                        <input type="radio" name="inquieto" id="inquieto" value="1" checked><label for="inquieto">1 - NUNCA</label> <br>
+                        <input type="radio" name="inquieto" id="inquieto" value="2"><label for="inquieto">2 - POCAS VECES</label> <br>
+                        <input type="radio" name="inquieto" id="inquieto" value="3"><label for="inquieto">3 - A VECES</label> <br>
+                        <input type="radio" name="inquieto" id="inquieto" value="4"><label for="inquieto">4 - MUCHAS VECES</label> <br>
+                        <input type="radio" name="inquieto" id="inquieto" value="5"><label for="inquieto">5 - SIEMPRE</label> <br> <br>
+                     
                         <!-- pregunta 6  -->
-                        <label for="06-impaciente">6. ¿Con qué frecuencia te has sentido tan impaciente que no has podido mantenerte quieto (a)?</label> <br> <br>
-                        <input type="radio" name="06-impaciente" id="06-impaciente" value="1" checked><label for="06-impaciente">1 - NUNCA</label> <br>
-                        <input type="radio" name="06-impaciente" id="06-impaciente" value="2"><label for="06-impaciente">2 - POCAS VECES</label> <br>
-                        <input type="radio" name="06-impaciente" id="06-impaciente" value="3"><label for="06-impaciente">3 - A VECES</label> <br>
-                        <input type="radio" name="06-impaciente" id="06-impaciente" value="4"><label for="06-impaciente">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="06-impaciente" id="06-impaciente" value="5"><label for="06-impaciente">5 - SIEMPRE</label> <br> <br>
+                          <!-- DAVID: "06-impaciente" cambiado a "impaciente" por un error de sintaxis en backend-->
+                        <label for="impaciente">6. ¿Con qué frecuencia te has sentido tan impaciente que no has podido mantenerte quieto (a)?</label> <br> <br>
+                        <input type="radio" name="impaciente" id="impaciente" value="1" checked><label for="impaciente">1 - NUNCA</label> <br>
+                        <input type="radio" name="impaciente" id="impaciente" value="2"><label for="impaciente">2 - POCAS VECES</label> <br>
+                        <input type="radio" name="impaciente" id="impaciente" value="3"><label for="impaciente">3 - A VECES</label> <br>
+                        <input type="radio" name="impaciente" id="impaciente" value="4"><label for="impaciente">4 - MUCHAS VECES</label> <br>
+                        <input type="radio" name="impaciente" id="impaciente" value="5"><label for="impaciente">5 - SIEMPRE</label> <br> <br>
+                      
                         <!-- pregunta 7 -->
-                        <label for="07-deprimido">7. ¿Con qué frecuencia te has sentido deprimido (a)?</label> <br> <br>
-                        <input type="radio" name="07-deprimido" id="07-deprimido" value="1" checked><label for="07-deprimido">1 - NUNCA</label> <br>
-                        <input type="radio" name="07-deprimido" id="07-deprimido" value="2"><label for="07-deprimido">2 - POCAS VECES</label> <br>
-                        <input type="radio" name="07-deprimido" id="07-deprimido" value="3"><label for="07-deprimido">3 - A VECES</label> <br>
-                        <input type="radio" name="07-deprimido" id="07-deprimido" value="4"><label for="07-deprimido">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="07-deprimido" id="07-deprimido" value="5"><label for="07-deprimido">5 - SIEMPRE</label> <br> <br>
+                          <!-- DAVID: "07-deprimido" cambiado a "deprimido" por un error de sintaxis en backend-->
+                        <label for="deprimido">7. ¿Con qué frecuencia te has sentido deprimido (a)?</label> <br> <br>
+                        <input type="radio" name="deprimido" id="deprimido" value="1" checked><label for="deprimido">1 - NUNCA</label> <br>
+                        <input type="radio" name="deprimido" id="deprimido" value="2"><label for="deprimido">2 - POCAS VECES</label> <br>
+                        <input type="radio" name="deprimido" id="deprimido" value="3"><label for="deprimido">3 - A VECES</label> <br>
+                        <input type="radio" name="deprimido" id="deprimido" value="4"><label for="deprimido">4 - MUCHAS VECES</label> <br>
+                        <input type="radio" name="deprimido" id="deprimido" value="5"><label for="deprimido">5 - SIEMPRE</label> <br> <br>
+                      
                         <!-- pregunta 8 -->
-                        <label for="08-esfuerzo">8. ¿Con qué frecuencia has sentido que todo lo que haces representa un gran esfuerzo?</label> <br> <br>
-                        <input type="radio" name="08-esfuerzo" id="08-esfuerzo" value="1" checked><label for="08-esfuerzo">1 - NUNCA</label> <br>
-                        <input type="radio" name="08-esfuerzo" id="08-esfuerzo" value="2"><label for="08-esfuerzo">2 - POCAS VECES</label> <br>
-                        <input type="radio" name="08-esfuerzo" id="08-esfuerzo" value="3"><label for="08-esfuerzo">3 - A VECES</label> <br>
-                        <input type="radio" name="08-esfuerzo" id="08-esfuerzo" value="4"><label for="08-esfuerzo">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="08-esfuerzo" id="08-esfuerzo" value="5"><label for="08-esfuerzo">5 - SIEMPRE</label> <br> <br>
+                          <!-- DAVID: "08-esfuerzo" cambiado a "esfuerzo" por un error de sintaxis en backend-->
+                        <label for="esfuerzo">8. ¿Con qué frecuencia has sentido que todo lo que haces representa un gran esfuerzo?</label> <br> <br>
+                        <input type="radio" name="esfuerzo" id="esfuerzo" value="1" checked><label for="esfuerzo">1 - NUNCA</label> <br>
+                        <input type="radio" name="esfuerzo" id="esfuerzo" value="2"><label for="esfuerzo">2 - POCAS VECES</label> <br>
+                        <input type="radio" name="esfuerzo" id="esfuerzo" value="3"><label for="esfuerzo">3 - A VECES</label> <br>
+                        <input type="radio" name="esfuerzo" id="esfuerzo" value="4"><label for="esfuerzo">4 - MUCHAS VECES</label> <br>
+                        <input type="radio" name="esfuerzo" id="esfuerzo" value="5"><label for="esfuerzo">5 - SIEMPRE</label> <br> <br>
+                     
                         <!-- pregunta 9 -->
-                        <label for="09-animarte">9. ¿Con qué frecuencia te has sentido tan triste que nada  podía animarte?</label> <br> <br>
-                        <input type="radio" name="09-animarte" id="09-animarte" value="1" checked><label for="09-animarte">1 - NUNCA</label> <br>
-                        <input type="radio" name="09-animarte" id="09-animarte" value="2"><label for="09-animarte">2 - POCAS VECES</label> <br>
-                        <input type="radio" name="09-animarte" id="09-animarte" value="3"><label for="09-animarte">3 - A VECES</label> <br>
-                        <input type="radio" name="09-animarte" id="09-animarte" value="4"><label for="09-animarte">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="09-animarte" id="09-animarte" value="5"><label for="09-animarte">5 - SIEMPRE</label> <br> <br>
-                        <!-- pregunta 10 -->                        
-                        <label for="10-inutil">10. ¿Con qué frecuencia te has sentido inútil?</label> <br> <br>
-                        <input type="radio" name="10-inutil" id="10-inutil" value="1" checked><label for="10-inutil">1 - NUNCA</label> <br>
-                        <input type="radio" name="10-inutil" id="10-inutil" value="2"><label for="10-inutil">2 - POCAS VECES</label> <br>
-                        <input type="radio" name="10-inutil" id="10-inutil" value="3"><label for="10-inutil">3 - A VECES</label> <br>
-                        <input type="radio" name="10-inutil" id="10-inutil" value="4"><label for="10-inutil">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="10-inutil" id="10-inutil" value="5"><label for="10-inutil">5 - SIEMPRE</label> <br> <br>
+                          <!-- DAVID: "09-animarte" cambiado a "animarte" por un error de sintaxis en backend-->
+                        <label for="animarte">9. ¿Con qué frecuencia te has sentido tan triste que nada  podía animarte?</label> <br> <br>
+                        <input type="radio" name="animarte" id="animarte" value="1" checked><label for="animarte">1 - NUNCA</label> <br>
+                        <input type="radio" name="animarte" id="animarte" value="2"><label for="animarte">2 - POCAS VECES</label> <br>
+                        <input type="radio" name="animarte" id="animarte" value="3"><label for="animarte">3 - A VECES</label> <br>
+                        <input type="radio" name="animarte" id="animarte" value="4"><label for="animarte">4 - MUCHAS VECES</label> <br>
+                        <input type="radio" name="animarte" id="animarte" value="5"><label for="animarte">5 - SIEMPRE</label> <br> <br>
+                      
+                        <!-- pregunta 10 -->  
+                          <!-- DAVID: "10-inutil" cambiado a "inutil" por un error de sintaxis en backend-->                      
+                        <label for="inutil">10. ¿Con qué frecuencia te has sentido inútil?</label> <br> <br>
+                        <input type="radio" name="inutil" id="inutil" value="1" checked><label for="inutil">1 - NUNCA</label> <br>
+                        <input type="radio" name="inutil" id="inutil" value="2"><label for="inutil">2 - POCAS VECES</label> <br>
+                        <input type="radio" name="inutil" id="inutil" value="3"><label for="inutil">3 - A VECES</label> <br>
+                        <input type="radio" name="inutil" id="inutil" value="4"><label for="inutil">4 - MUCHAS VECES</label> <br>
+                        <input type="radio" name="inutil" id="inutil" value="5"><label for="inutil">5 - SIEMPRE</label> <br> <br>
+
+                        <!-- RESULTADO -->                          
                         <div class="resultado-malestar-psico" id="resultado-malestar-psico">
-                            <!-- aqui con el back hacer el conteo para mostrar el resultado -->
+                            <!-- aqui con el back hacer el conteo para mostrar el resultado --> 
                         </div>
                         <hr>
-                        <!-- aqui termina la primera parte del primer formulario -->
 
-                        <!-- segunda parte del formulario -->
+        <!----------------------------------------------- SEGUNDA PARTE DEL FORMULARIO------------------------------------------------------------------------------------>
                         <h3>VIOLENCIA</h3>
                         <p id="legenda">Responde a cada pregunta según se aplique a tu condición actual</p>
+                        
                         <!-- pregunta 11 -->
                         <label for="11-violacion">11. ¿Alguien  te ha forzado a tener contacto sexual o a tener relaciones sexuales? </label> <br> <br>
                         <input type="radio" name="11-violacion" id="11-violacion" value="1" checked><label for="11-violacion">1 - SI</label> <br>
@@ -265,48 +325,37 @@
                         <label for="12-cuchillo">12. ¿Te han amenazado con un arma (cuchillo, pistola, picahielos, palos, etc.)?</label> <br> <br>
                         <input type="radio" name="12-cuchillo" id="12-cuchillo" value="1" checked><label for="12-cuchillo">1 - SI</label> <br>
                         <input type="radio" name="12-cuchillo" id="12-cuchillo" value="2"><label for="12-cuchillo">2 - NO</label> <br> <br>
-                        <!-- <input type="radio" name="12-cuchillo" id="12-cuchillo" value="3"><label for="12-cuchillo">3 - A VECES</label> <br>
-                        <input type="radio" name="12-cuchillo" id="12-cuchillo" value="4"><label for="12-cuchillo">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="12-cuchillo" id="12-cuchillo" value="5"><label for="12-cuchillo">5 - SIEMPRE</label> <br> <br> -->
+                    
                         <!-- pregunta 13 -->
                         <label for="13-pareja">13. ¿Tu pareja te ha humillado, insultado, golpeado o amenazado?</label> <br> <br>
                         <input type="radio" name="13-pareja" id="13-pareja" value="1" checked><label for="13-pareja">1 - SI</label> <br>
                         <input type="radio" name="13-pareja" id="13-pareja" value="2"><label for="13-pareja">2 - NO</label> <br> <br>
-                        <!-- <input type="radio" name="13-pareja" id="13-pareja" value="3"><label for="13-pareja">3 - A VECES</label> <br>
-                        <input type="radio" name="13-pareja" id="13-pareja" value="4"><label for="13-pareja">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="13-pareja" id="13-pareja" value="5"><label for="13-pareja">5 - SIEMPRE</label> <br> <br> -->
+
                         <!-- pregunta 14 -->
                         <label for="14-golpessup">14. ¿Has recibido golpes, insultos y humillación por parte de compañeros o superiores?</label> <br> <br>
                         <input type="radio" name="14-golpessup" id="14-golpessup" value="1" checked><label for="14-golpessup">1 - SI</label> <br>
                         <input type="radio" name="14-golpessup" id="14-golpessup" value="2"><label for="14-golpessup">2 - NO</label> <br> <br>
-                        <!-- <input type="radio" name="14-golpessup" id="14-golpessup" value="3"><label for="14-golpessup">3 - A VECES</label> <br>
-                        <input type="radio" name="14-golpessup" id="14-golpessup" value="4"><label for="14-golpessup">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="14-golpessup" id="14-golpessup" value="5"><label for="14-golpessup">5 - SIEMPRE</label> <br> <br> -->
+                        
                         <!-- pregunta 15 -->
                         <label for="15-golpesfam">15. ¿Has recibido insultos, golpes, insultos y humillacion por parte de un familiar?</label> <br> <br>
                         <input type="radio" name="15-golpesfam" id="15-golpesfam" value="1" checked><label for="15-golpesfam">1 - SI</label> <br>
                         <input type="radio" name="15-golpesfam" id="15-golpesfam" value="2"><label for="15-golpesfam">2 - NO</label> <br> <br>
-                        <!-- <input type="radio" name="15-golpesfam" id="15-golpesfam" value="3"><label for="15-golpesfam">3 - A VECES</label> <br>
-                        <input type="radio" name="15-golpesfam" id="15-golpesfam" value="4"><label for="15-golpesfam">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="15-golpesfam" id="15-golpesfam" value="5"><label for="15-golpesfam">5 - SIEMPRE</label> <br> <br> -->
+                        
                         <!-- pregunta 16 -->
                         <label for="16-famasalt">16. ¿Alguno de tus familiares ha sido lesionado por ser asaltado?</label> <br> <br>
                         <input type="radio" name="16-famasalt" id="16-famasalt" value="1" checked><label for="16-famasalt">1 - SI</label> <br>
                         <input type="radio" name="16-famasalt" id="16-famasalt" value="2"><label for="16-famasalt">2 - NO</label> <br> <br>
-                        <!-- <input type="radio" name="16-famasalt" id="16-famasalt" value="3"><label for="16-famasalt">3 - A VECES</label> <br>
-                        <input type="radio" name="16-famasalt" id="16-famasalt" value="4"><label for="16-famasalt">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="16-famasalt" id="16-famasalt" value="5"><label for="16-famasalt">5 - SIEMPRE</label> <br> <br> -->
+                        
                         <!-- pregunta 17 -->
                         <label for="17-famsecuest">17. ¿Alguno de tus familiares ha sido secuestrado?</label> <br> <br>
                         <input type="radio" name="17-famsecuest" id="17-famsecuest" value="1" checked><label for="17-famsecuest">1 - SI</label> <br>
                         <input type="radio" name="17-famsecuest" id="17-famsecuest" value="2"><label for="17-famsecuest">2 - NO</label> <br> <br>
-                        <!-- <input type="radio" name="17-famsecuest" id="17-famsecuest" value="3"><label for="17-famsecuest">3 - A VECES</label> <br>
-                        <input type="radio" name="17-famsecuest" id="17-famsecuest" value="4"><label for="17-famsecuest">4 - MUCHAS VECES</label> <br>
-                        <input type="radio" name="17-famsecuest" id="17-famsecuest" value="5"><label for="17-famsecuest">5 - SIEMPRE</label> <br> <br> -->
+                       
                         <!-- pregunta 18 -->
                         <label for="18-tusecuest">18. ¿Has sido asaltado o secuestrado?</label> <br> <br>
                         <input type="radio" name="18-tusecuest" id="18-tusecuest" value="1" checked><label for="18-tusecuest">1 - SI</label> <br>
                         <input type="radio" name="18-tusecuest" id="18-tusecuest" value="2"><label for="18-tusecuest">2 - NO</label> <br> <br>
+                       
                         <!-- pregunta 19 -->
                         <label for="19-forzadrogas">19. ¿Te han forzado a ingerir bebidas alcoholicas, drogas o alguna sustancia dañina?</label> <br> <br>
                         <input type="radio" name="19-forzadrogas" id="19-forzadrogas" value="1" checked><label for="19-forzadrogas">1 - SI</label> <br>
@@ -815,6 +864,9 @@
         </section>
     </div>
 
+    <div class="btn-guardar">
+        <button class="guardar">GUARDAR</button>
+    </div>
     
     <!-- aqui va el footer -->
     <footer>
