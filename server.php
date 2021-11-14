@@ -164,7 +164,7 @@
         $tabaco=$alcohol=$cannabis=$otras=$alcohol2=0;*/
 
         $cansancio=$nervioso=$nocalma=$desesperado=$inquieto=$impaciente=$deprimido=$esfuerzo=$animarte=$inutil=0;
-        $MalestarPsic=0;    
+        $MalestarPsic=0;    //DAVID: Para guardar el puntaje de Malestar Psicológico
         
         function Validar(){
         //se definen las variables para las funciones globales
@@ -174,11 +174,21 @@
         $d1,$d2,$d3,$d4,$d5,$d6,$d7,$H1,*/
 
         global $cansancio,$nervioso,$nocalma,$desesperado,$inquieto,$impaciente,$deprimido,$esfuerzo,$animarte,$inutil;
-
-            //DAVID: Faltan las asignaciones de los datos (Psicosicial)
+        $cansancio = $_POST['01-cansancio'];
+        $nervioso = $_POST['02-nervioso'];
+        $nocalma = $_POST['03-nocalma'];
+        $desesperado = $_POST['04-desesperado'];
+        $inquieto = $_POST['05-inquieto'];
+        $impaciente = $_POST['06-impaciente'];
+        $deprimido = $_POST['07-deprimido'];
+        $esfuerzo = $_POST['08-esfuerzo'];
+        $animarte = $_POST['09-animarte'];
+        $inutil = $_POST['10-inutil'];
+            //DAVID: Faltan más asignaciones de los datos (Psicosicial)
 
 
         }
+        
 
         //DAVID: Calcular puntajes
         function Puntaje(){
@@ -190,7 +200,7 @@
         //DAVID: Imprime calculos
         function Imprimir(){
             global $$MalestarPsic;
-            echo "Puntaje de riesgo en tabaco: $MalestarPsi";
+            echo "Puntaje de riesgo en malestar psicológico: $MalestarPsi";
             echo "<br>";
             if($MalestarPsi>29){
                 echo "Riesgo muy alto de padecer un trastorno depresivo y/o ansioso se requiere valoración clínica";
