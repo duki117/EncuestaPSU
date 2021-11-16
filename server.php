@@ -156,35 +156,66 @@
 
 <?php
 //--------------------------------------------PHP DE SALUD PSICOSOCIAL--------------------------------------------
-        //Variables de funciones
-        /*$a1=$a2=$a3=$a4=$a5=$a6=$a7=$a8=$a9=$a10=$a11=$a12=$a13=$a14=$a15=$a16=$a17=$a18=
-        $b1=$b2=$b3=$b4=$b5=$b6=$b7=
-        $c1=$c2=$c3=$c4=$c5=$c6=$c7=
-        $d1=$d2=$d3=$d4=$d5=$d6=$d7=$H1=0;
-        $tabaco=$alcohol=$cannabis=$otras=$alcohol2=0;*/
-
+        //DAVID: Variables de funciones
         $cansancio=$nervioso=$nocalma=$desesperado=$inquieto=$impaciente=$deprimido=$esfuerzo=$animarte=$inutil=0;
-        $MalestarPsic=0;    //DAVID: Para guardar el puntaje de Malestar Psicológico
+        $MalestarPsic=$RiesgSuici=0;    //DAVID: Para guardar el puntaje de Malestar Psicológico
+        $violacion= $cuchillo= $pareja= $golpessup= $golpesfam= $famasalt= $famsecuest= $tusecuest= $forzadrogas =0;
+        $esperanza= $vencido= $mal= $vida= $tiempo= $futuro= $oscuro= $buenas= $cambio= $experiencias= $desagradable= $deseo= $futuro2= $marcha= $confianza= $absurdo= $satisfaccion= $vago= $epocas= $logro = 0;
+        $intento = 0;
         
-        function Validar(){
-        //se definen las variables para las funciones globales
-        /*global $a1,$a2,$a3,$a4,$a5,$a6,$a7,$a8,$a9,$a10,$a11,$a11,$a12,$a13,$a14,$a15,$a16,$a17,$a18,
-        $b1,$b2,$b3,$b4,$b5,$b6,$b7,
-        $c1,$c2,$c3,$c4,$c5,$c6,$c7,
-        $d1,$d2,$d3,$d4,$d5,$d6,$d7,$H1,*/
+        function Validar() {
+            //DAVID: Se definen las variables para las funciones globales
+            global $cansancio,$nervioso,$nocalma,$desesperado,$inquieto,$impaciente,$deprimido,$esfuerzo,$animarte,$inutil,
+            $violacion, $cuchillo, $pareja, $golpessup, $golpesfam, $famasalt, $famsecuest, $tusecuest, $forzadrogas,
+            $esperanza, $vencido, $mal, $vida, $tiempo, $futuro, $oscuro, $buenas, $cambio, $experiencias, $desagradable, $deseo, $futuro2, $marcha, $confianza, $absurdo, $satisfaccion, $vago, $epocas, $logro,
+            $intento;
+        
+            //DAVID: Primera parte del formulario
+            $cansancio = $_POST['01-cansancio'];
+            $nervioso = $_POST['02-nervioso'];
+            $nocalma = $_POST['03-nocalma'];
+            $desesperado = $_POST['04-desesperado'];
+            $inquieto = $_POST['05-inquieto'];
+            $impaciente = $_POST['06-impaciente'];
+            $deprimido = $_POST['07-deprimido'];
+            $esfuerzo = $_POST['08-esfuerzo'];
+            $animarte = $_POST['09-animarte'];
+            $inutil = $_POST['10-inutil'];
 
-        global $cansancio,$nervioso,$nocalma,$desesperado,$inquieto,$impaciente,$deprimido,$esfuerzo,$animarte,$inutil;
-        $cansancio = $_POST['01-cansancio'];
-        $nervioso = $_POST['02-nervioso'];
-        $nocalma = $_POST['03-nocalma'];
-        $desesperado = $_POST['04-desesperado'];
-        $inquieto = $_POST['05-inquieto'];
-        $impaciente = $_POST['06-impaciente'];
-        $deprimido = $_POST['07-deprimido'];
-        $esfuerzo = $_POST['08-esfuerzo'];
-        $animarte = $_POST['09-animarte'];
-        $inutil = $_POST['10-inutil'];
-            //DAVID: Faltan más asignaciones de los datos (Psicosicial)
+            //DAVID: Segunda parte del formulario
+            $violacion = $_POST['11-violacion'];
+            $cuchillo= $_POST['12-cuchillo'];
+            $pareja = $_POST['13-pareja'];
+            $golpessup = $_POST['14-golpessup'];
+            $golpesfam = $_POST['15-golpesfam'];
+            $famasalt= $_POST['16-famasalt'];
+            $famsecuest = $_POST['17-famsecuest'];
+            $tusecuest= $_POST['18-tusecuest'];
+            $forzadrogas = $_POST['19-forzadrogas'];
+
+            //DAVID: Tercera parte del formulario
+            $esperanza =$_POST['20-esperanza'];
+            $vencido = $_POST['21-vencido'];
+            $mal = $_POST['22-mal'];
+            $vida = $_POST['23-vida'];
+            $tiempo = $_POST['24-tiempo'];
+            $futuro = $_POST['25-futuro'];
+            $oscuro = $_POST['26-oscuro'];
+            $buenas = $_POST['27-buenas'];
+            $cambio= $_POST['28-cambio'];
+            $experiencias = $_POST['29-experiencias'];
+            $desagradable = $_POST['30-desagradable'];
+            $deseo = $_POST['31-deseo'];
+            $futuro2 = $_POST['32-futuro'];
+            $marcha = $_POST['33-marcha'];
+            $confianza = $_POST['34-confianza'];
+            $absurdo = $_POST['35-absurdo'];
+            $satisfaccion = $_POST['36-satisfaccion'];
+            $vago = $_POST['37-vago'];
+            $epocas = $_POST['38-epocas'];
+            $logro = $_POST['39-logro'];
+
+            $intento = $_POST['40-intento'];
 
 
         }
@@ -192,14 +223,21 @@
 
         //DAVID: Calcular puntajes
         function Puntaje(){
-            global $cansancio,$nervioso,$nocalma,$desesperado,$inquieto,$impaciente,$deprimido,$esfuerzo,$animarte,$inutil;
+            global $MalestarPsic,$cansancio,$nervioso,$nocalma,$desesperado,$inquieto,$impaciente,$deprimido,$esfuerzo,$animarte,$inutil,
+            $RiesgSuici,$esperanza, $vencido, $mal, $vida, $tiempo, $futuro, $oscuro, $buenas, $cambio, $experiencias, $desagradable, $deseo, $futuro2, $marcha, $confianza, $absurdo, $satisfaccion, $vago, $epocas, $logro;
             
+            //DAVID: Puntajes de primera parte del formulario
             $MalestarPsic= $cansancio+$nervioso+$nocalma+$desesperado+$inquieto+$impaciente+$deprimido+$esfuerzo+$animarte+$inutil;
+
+            //DAVID: Puntajes de segunda parte del formulario
+            $RiesgSuici = $esperanza+ $vencido+ $mal+ $vida+ $tiempo+ $futuro+ $oscuro+ $buenas+ $cambio+ $experiencias+ $desagradable+ $deseo+ $futuro2+ $marcha+ $confianza+ $absurdo+ $satisfaccion+ $vago+ $epocas+ $logro;
         }
 
         //DAVID: Imprime calculos
         function Imprimir(){
-            global $$MalestarPsic;
+            global $MalestarPsic, $RiesgSuici;
+
+            //DAVID: Para primera parte del formulario
             echo "Puntaje de riesgo en malestar psicológico: $MalestarPsi";
             echo "<br>";
             if($MalestarPsi>29){
@@ -216,14 +254,23 @@
             }
             echo "<hr>";
 
-            //DAVID: Aquí va la calificación a sacar//
-
-
+            //DAVID: Para tercera parte del formulario
+            echo "Puntaje de riesgo suicida: $RiesgSuici";
+            echo "<br>";
+            if($RiesgSuici>7){
+                echo "Usted está en riesgo alto";
+                echo "<br>";
+            }else if($RiesgSuici>3){
+                echo "Usted está en riesgo medio";
+                echo "<br>";
+            }else{
+                echo "Usted está en riesgo medio";
+                echo "<br>";
+            }
+            echo "<hr>";
         }
-        
+    
         Validar();
         Puntaje();
         Imprimir();
-
-
 ?>

@@ -209,7 +209,7 @@
             <article class="saludpsico" id="saludpsico">
                 <fieldset>
                     <legend>SALUD PSICOSOCIAL</legend>
-                    <form action="#">
+                    <form action="server.php" method="post">
 
         <!------------------------------------PRIMERA PARTE del formulario-------------------------------------------------------------->
                         <h3>MALESTAR PSICOLÓGICO</h3>
@@ -353,9 +353,8 @@
                         <input type="radio" name="19-forzadrogas" id="19-forzadrogas" value="2"><label for="19-forzadrogas">2 - NO</label> <br> <br>
 
                         <hr>
-                        <!-- aqui termina la segunda parte del formulario -->
 
-                        <!-- tercera parte del formulario -->
+                    <!----------------------------------------------- TERCERA PARTE DEL FORMULARIO------------------------------------------------------------------------------------>
                         <h3>RIESGO SUICIDA - DESEPERANZA</h3>
                         <p id="legenda">Responde a cada pregunta según se aplique a tu condición actual</p>
                         <!-- pregunta 20 -->
