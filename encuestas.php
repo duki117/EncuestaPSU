@@ -4,6 +4,20 @@ session_start();
 	$id_psu = $_SESSION["id"];
     echo "<h3>$id_psu</h3>"
 ?>
+
+<?php
+# DAVID: cuando se completen las 4 secciones termina la encuesta
+#$_SESSION["sf"]=TRUE; #USADAS PARA DESARROLLO
+#$_SESSION["ss"]=TRUE;
+    if(isset($_SESSION["ss"]) ==TRUE && isset($_SESSION["sf"]) ==TRUE){
+        header("Location: ./gracias.php");
+    }
+# Descomentar cuando estén listas las 4 secciones:
+    #if(isset($_SESSION["ss"])==TRUE && isset($_SESSION["sp"])==TRUE && isset($_SESSION["cs"])==TRUE && isset($_SESSION["sf"])==TRUE){
+        #header("Location: ./gracias.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
