@@ -1,4 +1,10 @@
 <?php
+$_SESSION["ss"]=TRUE;
+#$_SESSION["sf"]=TRUE;
+#$_SESSION["sp"]=TRUE;
+#$_SESSION["cs"]=TRUE;
+
+
 //UTILIZAMOS EL ID DE LA SESION PARA MANDARLA A LA TABLA
 if(!isset($_SESSION)) 
     { 
@@ -53,6 +59,7 @@ if(isset($_POST['saludSexual'])){
             $rest8 = mysqli_query($conex,$consulta8);
             $rest9 = mysqli_query($conex,$consulta9);
             $rest10 = mysqli_query($conex,$consulta10);
+
             //ESTA PARTE SERA PARA OCULTAR LA SECCION CUANDO SE HAGA TODO CORRECTAMENTE
             if($rest1 && $rest2 && $rest3 && $rest4 && $rest5 && $rest6 && $rest7 && $rest8 && $rest9 && $rest10){
                 ?>
@@ -65,6 +72,7 @@ if(isset($_POST['saludSexual'])){
                 <h3>Ha ocurrido un error</h3>
                 <?php
             }
+            
     //TIENE QUE CONTESTAR TODAS LAS PREGUNTAS PARA GUARDAR
     }else{
     ?>
