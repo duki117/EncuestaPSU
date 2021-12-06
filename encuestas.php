@@ -1,20 +1,21 @@
 <?php
 # Utilizamos una session para usar el id previamente guardado
 session_start();
+if(isset($_SESSION["id"])){
 	$id_psu = $_SESSION["id"];
-    echo "<h3>$id_psu</h3>"
+    echo "<h3>$id_psu</h3>";
+}else{
+    header("Location: ./login.php");
+}
 ?>
 
 <?php
 # DAVID: cuando se completen las 4 secciones termina la encuesta
 #$_SESSION["sf"]=TRUE; #USADAS PARA DESARROLLO
 #$_SESSION["ss"]=TRUE;
-    if(isset($_SESSION["ss"]) ==TRUE && isset($_SESSION["sf"]) ==TRUE){
+    if(isset($_SESSION["ss"])==TRUE && isset($_SESSION["sp"])==TRUE && isset($_SESSION["cs"])==TRUE && isset($_SESSION["sf"])==TRUE){
         header("Location: ./gracias.php");
     }
-# Descomentar cuando estén listas las 4 secciones:
-    #if(isset($_SESSION["ss"])==TRUE && isset($_SESSION["sp"])==TRUE && isset($_SESSION["cs"])==TRUE && isset($_SESSION["sf"])==TRUE){
-        #header("Location: ./gracias.php");
 ?>
 
 
