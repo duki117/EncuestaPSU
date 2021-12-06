@@ -1,15 +1,11 @@
 <?php
 
-$_SESSION["sf"]=TRUE;
-#$_SESSION["ss"]=TRUE;
-#$_SESSION["sp"]=TRUE;
-#$_SESSION["cs"]=TRUE;
-
 
 //UTILIZAMOS EL ID DE LA SESION PARA MANDARLA A LA TABLA
 if(!isset($_SESSION)) 
     { 
         session_start(); 
+        
     } 
 $idpsu = $_SESSION["id"];
 //INCLUIMOS LA CONEXION A LA BASE DE DATOS
@@ -82,6 +78,8 @@ if(isset($_POST['saludFisica'])){
             $rest14 = mysqli_query($conex,$consulta14);
             $rest15 = mysqli_query($conex,$consulta15);
             
+           
+
             //ESTA PARTE SERA PARA OCULTAR LA SECCION CUANDO SE HAGA TODO CORRECTAMENTE
             if($rest1 && $rest2 && $rest3 && $rest4 && $rest5 && $rest6 && $rest7 && $rest8 && $rest9 && $rest10 && $rest11 && $rest12 && $rest13 && $rest14 && $rest15){
                 ?>
@@ -89,6 +87,10 @@ if(isset($_POST['saludFisica'])){
                     document.getElementById("saludfsi").style.display = "none";
                 </script>
                 <?php
+                 $_SESSION["sf"]=TRUE;
+                 #$_SESSION["ss"]=TRUE;
+                 #$_SESSION["sp"]=TRUE;
+                 #$_SESSION["cs"]=TRUE;
             }else{
                 ?>
                 <h3>Ha ocurrido un error</h3>
@@ -102,4 +104,8 @@ if(isset($_POST['saludFisica'])){
         <?php
     }
 }
+$_SESSION["ss"]=TRUE;
+            #$_SESSION["sf"]=TRUE;
+            #$_SESSION["sp"]=TRUE;
+            #$_SESSION["cs"]=TRUE;
 ?>
