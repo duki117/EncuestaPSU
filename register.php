@@ -59,6 +59,7 @@ if(isset($_POST['register'])){
             }
             if($resultado && $resultado){
                 $_SESSION["id"] = $_POST['id'];
+                $_SESSION["sexo"] = $_POST['sexo'];
                 header("Location: encuestas.php");
                 die();
             }else{
