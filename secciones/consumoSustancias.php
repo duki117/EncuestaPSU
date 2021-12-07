@@ -2,7 +2,7 @@
 #$_SESSION["ss"]=TRUE;
 #$_SESSION["sf"]=TRUE;
 #$_SESSION["sp"]=TRUE;
-$_SESSION["cs"]=TRUE;
+#$_SESSION["cs"]=TRUE;
 
 //UTILIZAMOS EL ID DE LA SESION PARA MANDARLA A LA TABLA
 if(!isset($_SESSION)){ 
