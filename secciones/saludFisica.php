@@ -87,7 +87,7 @@ if(isset($_POST['saludFisica'])){
                     document.getElementById("saludfsi").style.display = "none";
                 </script>
                 <?php
-                 $_SESSION["sf"]=TRUE;
+                # $_SESSION["sf"]=TRUE;
                  #$_SESSION["ss"]=TRUE;
                  #$_SESSION["sp"]=TRUE;
                  #$_SESSION["cs"]=TRUE;
